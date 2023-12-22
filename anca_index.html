@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercícios Ombro</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          fontFamily: {
+            sans: ["Roboto", "sans-serif"],
+            body: ["Roboto", "sans-serif"],
+            mono: ["ui-monospace", "monospace"],
+          },
+        },
+        corePlugins: {
+          preflight: false,
+        },
+      };
+    </script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <nav
+      class="relative flex w-full items-center justify-between bg-zinc-800 py-6 shadow-sm shadow-neutral-700/10 dark:bg-neutral-800 dark:shadow-black/30 lg:flex-wrap lg:justify-start"
+      data-te-navbar-ref
+    >
+      <!-- Container wrapper -->
+      <div class="flex w-full flex-wrap items-center justify-between px-6">
+        <div class="flex items-center">
+          <!-- Toggle button -->
+          <button
+            class="block border-0 bg-transparent py-2 pr-2.5 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+            type="button"
+            data-te-collapse-init
+            data-te-target="#navbarSupportedContentY"
+            aria-controls="navbarSupportedContentY"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="[&>svg]:w-7">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="h-7 w-7"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </span>
+          </button>
+
+          <!-- Navbar Brand -->
+          <a class="text-primary dark:text-primary-400" href="index.html">
+            <span
+              class="[&>svg]:ml-2 [&>svg]:mr-3 [&>svg]:h-6 [&>svg]:w-6 [&>svg]:lg:ml-0"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#26aed3}</style><path d="M96 64c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32V224v64V448c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V384H64c-17.7 0-32-14.3-32-32V288c-17.7 0-32-14.3-32-32s14.3-32 32-32V160c0-17.7 14.3-32 32-32H96V64zm448 0v64h32c17.7 0 32 14.3 32 32v64c17.7 0 32 14.3 32 32s-14.3 32-32 32v64c0 17.7-14.3 32-32 32H544v64c0 17.7-14.3 32-32 32H480c-17.7 0-32-14.3-32-32V288 224 64c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32zM416 224v64H224V224H416z"/></svg>        </a>
+
+            </span>
+          </a>
+          
+          <p class="text-white"><b>MFR -</b>  Programas de exercícios para o domicílio</p>
+        </div>
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+
+
+    <div class="flex">
+        <!-- Sidenav -->
+      <div class="min-h-screen w-2/12 bg-sky-200  text-zinc-900 px-4">
+        <h5
+          class="font-bold py-5 border-b border-white text-center text-xl mx-1 "
+        >
+          <p href="#">Anca</p>
+        </h5>
+
+          <!-- First Sub-container of sidebar -->
+          <div class="py-6">
+            <ul>
+  
+              <!-- TODOS -->
+              <li class="py-3 px-5  bg-cyan-600 text-white rounded-lg mt-2">
+                <a href="../ombro_index.html">Todos</a>
+              </li>
+              
+              
+              <!-- TENDINOPATIA DROPDOWN -->
+              <li>
+                <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-cyan-600 hover:text-white dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-tendinopatia" data-collapse-toggle="dropdown-tendinopatia">
+    
+                  <p class="flex-1 ml-3 pr-1 text-left whitespace-wrap ">Tendinopatia da coifa</p>
+                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                  </svg>
+                </button>
+                <ul id="dropdown-tendinopatia" class="hidden py-2 space-y-2 text-sm">
+                  <li>
+                     <a href="./ombro/tendinopatia_coifa_básico.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-cyan-600 hover:text-white dark:text-white dark:hover:bg-gray-700">Nível básico</a>
+                  </li>
+                  <li>
+                     <a href="./ombro/tendinopatia_coifa_intermédio.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-cyan-600 hover:text-white dark:text-white dark:hover:bg-gray-700">Nível intermédio</a>
+                  </li>
+                  <li>
+                     <a href="./ombro/tendinopatia_coifa_avançado.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-cyan-600 hover:text-white dark:text-white dark:hover:bg-gray-700">Nível avançado</a>
+                  </li>
+                </ul>
+              </li>
+              
+    
+              <!-- RUTURA DROPDOWN -->
+              <li>
+              <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-cyan-600 hover:text-white dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-rutura" data-collapse-toggle="dropdown-rutura">
+    
+                <p class="flex-1 ml-3 text-left whitespace-wrap ">Rutura da coifa</p>
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                </svg>
+              </button>
+              <ul id="dropdown-rutura" class="hidden py-2 space-y-2 text-sm">
+                <li>
+                   <a href="./tendinopatia_coifa_básico.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-cyan-600 hover:text-white dark:text-white dark:hover:bg-gray-700">Nível básico</a>
+                </li>
+                <li>
+                   <a href="./tendinopatia_coifa_intermédio.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-cyan-600 hover:text-white dark:text-white dark:hover:bg-gray-700">Nível intermédio</a>
+                </li>
+                <li>
+                   <a href="./tendinopatia_coifa_avançado.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-cyan-600 hover:text-white dark:text-white dark:hover:bg-gray-700">Nível avançado</a>
+                </li>
+              </ul>   
+              </li>
+    
+    
+              <!-- CAPSULITE DROPDOWN -->
+              <li>
+                <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-cyan-600 hover:text-white dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-capsulite" data-collapse-toggle="dropdown-capsulite">
+    
+                  <p class="flex-1 ml-3 text-left whitespace-wrap ">Capsulite adesiva</p>
+                  <svg class="w-3 h-3 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                  </svg>
+                </button>
+                <ul id="dropdown-capsulite" class="hidden py-2 space-y-2 text-sm">
+                  <li>
+                     <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-cyan-600 hover:text-white dark:text-white dark:hover:bg-gray-700">Nível básico</a>
+                  </li>
+                  <li>
+                     <a href="./tendinopatia_coifa_intermédio.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-cyan-600 hover:text-white dark:text-white dark:hover:bg-gray-700">Nível intermédio</a>
+                  </li>
+                  <li>
+                     <a href="./tendinopatia_coifa_avançado.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-cyan-600 hover:text-white dark:text-white dark:hover:bg-gray-700">Nível avançado</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+
+          <!-- Second Sub-container of sidebar -->
+          <div class="border-t border-white">
+            <ul>
+              <li class="py-3 px-5 mx-1 hover:bg-cyan-600 hover:text-white rounded-lg mt-2 ">
+                <a href="./ombro_index.html">Ombro</a>
+              </li>
+              <li class="py-3 px-5 mx-1 hover:bg-cyan-600 hover:text-white rounded-lg mt-2">
+                <a href="./punho_index.html">Punho e mão</a>
+              </li>
+              <li class="py-3 px-5 mx-1 hover:bg-cyan-600 hover:text-white rounded-lg mt-2">
+                <a href="./punho_index.html">Punho e mão</a>
+              </li>
+              <li class="py-3 px-5 mx-1 hover:bg-cyan-600 hover:text-white rounded-lg mt-2">
+                <a href="./knee_index.html">Joelho</a>
+              </li>
+              <li class="py-3 px-5 mx-1 hover:bg-cyan-600 hover:text-white rounded-lg mt-2">
+                <a href="./ankle_index.html">Tornozelo e pé</a>
+              </li>
+              <li class="py-3 px-5 mx-1 hover:bg-cyan-600 hover:text-white rounded-lg mt-2">
+                <a href="#">Coluna Cervical</a>
+              </li>
+              <li class="py-3 px-5 mx-1 hover:bg-cyan-600 hover:text-white rounded-lg mt-2">
+                <a href="#">Coluna Dorsal</a>
+              </li>
+              <li class="py-3 px-5 mx-1 hover:bg-cyan-600 hover:text-white rounded-lg mt-2">
+                <a href="#">Coluna Lombar</a>
+              </li>
+            </ul>
+
+          </div>
+
+
+      </div>
+
+      <!-- Right container -->
+      <div class="w-10/12">
+        <!-- <div >
+            <h2 class="text-6xl font-bold text-center py-5 pt-10 text-cyan-900 mt-10">Ombro</h2>
+            <p class="text-center py-4 pb-8 "><u>Selecione os exercícios a incorporar no programa</u></p>
+        </div> -->
+
+
+        <div
+        class="relative overflow-hidden bg-cover bg-[50%] bg-no-repeat w-full ">
+        <img
+          src="./images/bg_hip.jpg"
+          class="w-full h-60 object-cover" />
+        <div
+          class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
+          style="background-color: hsla(0, 0%, 0%, 0.7)">
+          <div class="flex h-full items-center justify-center">
+            <p class="text-white opacity-100 text-7xl font-bold">Anca</p>
+          </div>
+        </div>
+      </div>
+      <p class="text-center text-zinc-800 pt-12 pb-8 ">Selecione os exercícios a incorporar no programa</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="px-20 ">
+
+        <!-- SUBTITLE SECTION -->
+        <div class=" mb-10 mt-10  text-zinc-800 text-2xl flex items-center">
+            <!-- <img width="60" height="60" src="./images/icons8-curls-with-dumbbells-80(1).png" alt="curls-with-dumbbells"/>  -->
+            <p class="pl-4 py-2 text-zinc-800 font-bold bg-amber-200 w-full">Mobilidade</p>
+        </div>
+
+
+        <!-- SUBSECTION CARDS CONTAINER -->
+        <div class="flex flex-wrap justify-between"> 
+
+
+          <!-- Individual card -->
+          <div data-exercise_name="Rotação Externa" class="bg-amber-100 w-72 rounded shadow-md mb-10 ">
+
+            <div class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center">
+              <div>
+                <h2 class="">
+                  Rotação externa resistida com banda elástica
+                </h2>
+              </div>
+                <div>
+                  <input
+                  class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                  type="checkbox"
+                /> 
+                </div>
+
+            </div>
+
+            <div class="flex bg-white rounded-lg">
+              <img
+                class="h-40 w-72 object-contain rounded-b-lg"
+                src="./images/external_rotation.png"
+                alt=""
+                data-img="./images/external_rotation.png"
+              />
+              <div class="flex justify-center items-center">
+                <!-- <div class="p-4 rounded-b-lg">
+                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Officiis dignissimos officia vitae
+                  asperiores ea quis aliquid explicabo id in debitis.">
+                    Descrição: Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Officiis dignissimos officia vitae
+                    asperiores ea quis aliquid explicabo id in debitis.
+                  </p>
+                  <p data-series="Séries: 3"><b>Séries:</b></p>
+                  <p data-repetitions="Repetições: 8-12"><b>Repetições:</b></p>
+                </div> -->
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Individual card -->
+          <div data-exercise_name="Rotação Externa" class="bg-amber-100 w-72 rounded shadow-md mb-10 ">
+
+            <div class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center">
+              <div>
+                <h2 class="">
+                  Rotação externa resistida com banda elástica
+                </h2>
+              </div>
+                <div>
+                  <input
+                  class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                  type="checkbox"
+                /> 
+                </div>
+
+            </div>
+
+            <div class="flex bg-white rounded-lg">
+              <img
+                class="h-40 w-72 object-contain rounded-b-lg"
+                src="./images/external_rotation.png"
+                alt=""
+                data-img="./images/external_rotation.png"
+              />
+              <div class="flex justify-center items-center">
+                <!-- <div class="p-4 rounded-b-lg">
+                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Officiis dignissimos officia vitae
+                  asperiores ea quis aliquid explicabo id in debitis.">
+                    Descrição: Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Officiis dignissimos officia vitae
+                    asperiores ea quis aliquid explicabo id in debitis.
+                  </p>
+                  <p data-series="Séries: 3"><b>Séries:</b></p>
+                  <p data-repetitions="Repetições: 8-12"><b>Repetições:</b></p>
+                </div> -->
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Individual card -->
+          <div data-exercise_name="Rotação Externa" class="bg-amber-100 w-72 rounded shadow-md mb-10 ">
+
+            <div class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center">
+              <div>
+                <h2 class="">
+                  Rotação externa resistida com banda elástica
+                </h2>
+              </div>
+                <div>
+                  <input
+                  class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                  type="checkbox"
+                /> 
+                </div>
+
+            </div>
+
+            <div class="flex bg-white rounded-lg">
+              <img
+                class="h-40 w-72 object-contain rounded-b-lg"
+                src="./images/external_rotation.png"
+                alt=""
+                data-img="./images/external_rotation.png"
+              />
+              <div class="flex justify-center items-center">
+                <!-- <div class="p-4 rounded-b-lg">
+                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Officiis dignissimos officia vitae
+                  asperiores ea quis aliquid explicabo id in debitis.">
+                    Descrição: Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Officiis dignissimos officia vitae
+                    asperiores ea quis aliquid explicabo id in debitis.
+                  </p>
+                  <p data-series="Séries: 3"><b>Séries:</b></p>
+                  <p data-repetitions="Repetições: 8-12"><b>Repetições:</b></p>
+                </div> -->
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Individual card -->
+          <div data-exercise_name="Rotação Externa" class="bg-amber-100 w-72 rounded shadow-md mb-10 ">
+
+            <div class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center">
+              <div>
+                <h2 class="">
+                  Rotação externa resistida com banda elástica
+                </h2>
+              </div>
+                <div>
+                  <input
+                  class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                  type="checkbox"
+                /> 
+                </div>
+
+            </div>
+
+            <div class="flex bg-white rounded-lg">
+              <img
+                class="h-40 w-72 object-contain rounded-b-lg"
+                src="./images/external_rotation.png"
+                alt=""
+                data-img="./images/external_rotation.png"
+              />
+              <div class="flex justify-center items-center">
+                <!-- <div class="p-4 rounded-b-lg">
+                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Officiis dignissimos officia vitae
+                  asperiores ea quis aliquid explicabo id in debitis.">
+                    Descrição: Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Officiis dignissimos officia vitae
+                    asperiores ea quis aliquid explicabo id in debitis.
+                  </p>
+                  <p data-series="Séries: 3"><b>Séries:</b></p>
+                  <p data-repetitions="Repetições: 8-12"><b>Repetições:</b></p>
+                </div> -->
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+
+        
+        <!-- SUBTITLE SECTION -->
+
+        <div class=" mb-10 mt-10  text-zinc-800 text-2xl flex items-center ">
+          <!-- <img width="60" height="60" src="./images/icons8-curls-with-dumbbells-80(1).png" alt="curls-with-dumbbells"/>  -->
+          <p class="pl-4 py-2 font-bold bg-amber-200 w-full ">Fortalecimento muscular</p>
+        </div>
+
+
+      <!-- SUBSECTION CARDS CONTAINER -->
+      <div class="flex flex-wrap justify-between"> 
+
+        <!-- Individual card -->
+        <div data-exercise_name="Rotação Externa" class="bg-amber-100 w-72 rounded shadow-md mb-10 ">
+
+          <div class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center">
+            <div>
+              <h2 class="">
+                Rotação externa resistida com banda elástica
+              </h2>
+            </div>
+              <div>
+                <input
+                class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                type="checkbox"
+              /> 
+              </div>
+
+          </div>
+
+          <div class="flex bg-white rounded-lg">
+            <img
+              class="h-40 w-72 object-contain rounded-b-lg"
+              src="./images/external_rotation.png"
+              alt=""
+              data-img="./images/external_rotation.png"
+            />
+            <div class="flex justify-center items-center">
+              <!-- <div class="p-4 rounded-b-lg">
+                <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
+                adipisicing elit. Officiis dignissimos officia vitae
+                asperiores ea quis aliquid explicabo id in debitis.">
+                  Descrição: Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Officiis dignissimos officia vitae
+                  asperiores ea quis aliquid explicabo id in debitis.
+                </p>
+                <p data-series="Séries: 3"><b>Séries:</b></p>
+                <p data-repetitions="Repetições: 8-12"><b>Repetições:</b></p>
+              </div> -->
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Individual card -->
+        <div data-exercise_name="Rotação Externa" class="bg-amber-100 w-72 rounded shadow-md mb-10 ">
+
+          <div class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center">
+            <div>
+              <h2 class="">
+                Rotação externa resistida com banda elástica
+              </h2>
+            </div>
+              <div>
+                <input
+                class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                type="checkbox"
+              /> 
+              </div>
+
+          </div>
+
+          <div class="flex bg-white rounded-lg">
+            <img
+              class="h-40 w-72 object-contain rounded-b-lg"
+              src="./images/external_rotation.png"
+              alt=""
+              data-img="./images/external_rotation.png"
+            />
+            <div class="flex justify-center items-center">
+              <!-- <div class="p-4 rounded-b-lg">
+                <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
+                adipisicing elit. Officiis dignissimos officia vitae
+                asperiores ea quis aliquid explicabo id in debitis.">
+                  Descrição: Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Officiis dignissimos officia vitae
+                  asperiores ea quis aliquid explicabo id in debitis.
+                </p>
+                <p data-series="Séries: 3"><b>Séries:</b></p>
+                <p data-repetitions="Repetições: 8-12"><b>Repetições:</b></p>
+              </div> -->
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Individual card -->
+        <div data-exercise_name="Rotação Externa" class="bg-amber-100 w-72 rounded shadow-md mb-10 ">
+
+          <div class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center">
+            <div>
+              <h2 class="">
+                Rotação externa resistida com banda elástica
+              </h2>
+            </div>
+              <div>
+                <input
+                class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                type="checkbox"
+              /> 
+              </div>
+
+          </div>
+
+          <div class="flex bg-white rounded-lg">
+            <img
+              class="h-40 w-72 object-contain rounded-b-lg"
+              src="./images/external_rotation.png"
+              alt=""
+              data-img="./images/external_rotation.png"
+            />
+            <div class="flex justify-center items-center">
+              <!-- <div class="p-4 rounded-b-lg">
+                <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
+                adipisicing elit. Officiis dignissimos officia vitae
+                asperiores ea quis aliquid explicabo id in debitis.">
+                  Descrição: Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Officiis dignissimos officia vitae
+                  asperiores ea quis aliquid explicabo id in debitis.
+                </p>
+                <p data-series="Séries: 3"><b>Séries:</b></p>
+                <p data-repetitions="Repetições: 8-12"><b>Repetições:</b></p>
+              </div> -->
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Individual card -->
+        <div data-exercise_name="Rotação Externa" class="bg-amber-100 w-72 rounded shadow-md mb-10 ">
+
+          <div class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center">
+            <div>
+              <h2 class="">
+                Rotação externa resistida com banda elástica
+              </h2>
+            </div>
+              <div>
+                <input
+                class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                type="checkbox"
+              /> 
+              </div>
+
+          </div>
+
+          <div class="flex bg-white rounded-lg">
+            <img
+              class="h-40 w-72 object-contain rounded-b-lg"
+              src="./images/external_rotation.png"
+              alt=""
+              data-img="./images/external_rotation.png"
+            />
+            <div class="flex justify-center items-center">
+              <!-- <div class="p-4 rounded-b-lg">
+                <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
+                adipisicing elit. Officiis dignissimos officia vitae
+                asperiores ea quis aliquid explicabo id in debitis.">
+                  Descrição: Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Officiis dignissimos officia vitae
+                  asperiores ea quis aliquid explicabo id in debitis.
+                </p>
+                <p data-series="Séries: 3"><b>Séries:</b></p>
+                <p data-repetitions="Repetições: 8-12"><b>Repetições:</b></p>
+              </div> -->
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+    </div>
+
+        <div class="h-40 flex justify-center items-center" >
+            <div class="bg-rose-500 hover:bg-rose-600 w-80 mx-12 mt-30 rounded-full  text-center py-3 text-white flex flex-row justify-center items-center">
+                <a class=" font-bold" href="#">
+                    Generate PDF
+                </a>
+
+            </div>
+        </div>
+
+        <div class="bg-zinc-900 h-14 text-white text-center py-10 text-xs mt-20">
+            <p>Todos os direitos reservados.</p>
+        </div>
+    </div>
+
+
+
+
+    <script src="ombro.js"></script>
+  </body>
+</html>
