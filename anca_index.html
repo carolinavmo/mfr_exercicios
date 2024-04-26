@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js">
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercícios Ombro</title>
@@ -260,7 +263,7 @@
 
 
         <!-- SUBSECTION CARDS CONTAINER -->
-        <div class="flex flex-wrap justify-between"> 
+        <div class="flex flex-wrap justify-between" > 
 
 
           <!-- Individual card -->
@@ -447,7 +450,7 @@
 
 
       <!-- SUBSECTION CARDS CONTAINER -->
-      <div class="flex flex-wrap justify-between"> 
+      <div class="flex flex-wrap justify-between" id = "makepdf"> 
 
         <!-- Individual card -->
         <div data-exercise_name="Rotação Externa" class="bg-amber-100 w-72 rounded shadow-md mb-10 ">
@@ -618,21 +621,22 @@
         </div>
 
       </div>
-
-
-
-
-
-
-
-
     </div>
 
         <div class="h-40 flex justify-center items-center" >
             <div class="bg-rose-500 hover:bg-rose-600 w-80 mx-12 mt-30 rounded-full  text-center py-3 text-white flex flex-row justify-center items-center">
                 <a class=" font-bold" href="#">
-                    Generate PDF
+                  <button id="button"> Generate PDF </button>
                 </a>
+            
+                <script>
+                  let button = document.getElementById("button");
+                  let makepdf = document.getElementById("makepdf");
+              
+                  button.addEventListener("click", function () {
+                    html2pdf().from(makepdf).save();
+                  });
+                </script>
 
             </div>
         </div>
