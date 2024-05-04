@@ -6,7 +6,7 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercícios - Cotovelo</title>
+    <title>Exercícios - Ombro</title>
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
       rel="stylesheet"
@@ -41,18 +41,22 @@
 
       #print_page_1, #print_page_2, #print_page_3, #print_page_4, #print_page_5, #print_page_6, #print_page_7, #print_page_8, 
       #print_page_9, #print_page_10, #print_page_11, #print_page_12, #print_page_13, #print_page_14, #print_page_15, 
-      #print_page_16, #print_page_17, #print_page_18, #print_page_19, #print_page_20 {
+      #print_page_16, #print_page_17, #print_page_18, #print_page_19, #print_page_20, #print_recomendations {
         display: none;
         width: 100vw;
         box-shadow: none;   
       }
+
       #print-subtitle {
         display: none;
       }
 
 
 
+
           @media print {
+
+
             body * {
               -webkit-print-color-adjust: exact !important;   /* Chrome, Safari 6 – 15.3, Edge */
               print-color-adjust: exact !important; 
@@ -129,6 +133,9 @@
               width: 100vw;
 
             }
+
+
+
             input {
               display: none;
             }
@@ -139,6 +146,16 @@
               display: none;
             }
 
+            #individual_card_body_recomendations {
+              background-color: #caf4fff2;
+              color: black;
+              box-shadow: none;
+              font-size: 12px;
+              width: 100vw;
+              
+
+
+            }
 
 
 
@@ -162,7 +179,7 @@
         <div class="flex items-center">
 
           <!-- Navbar Brand -->
-          <a class="text-primary dark:text-primary-400" href="index.html">
+          <a class="text-primary dark:text-primary-400" href="../index.html">
             <span
               class="[&>svg]:ml-2 [&>svg]:mr-3 [&>svg]:h-6 [&>svg]:w-6 [&>svg]:lg:ml-0"
             >
@@ -174,7 +191,7 @@
           <p class="text-white"><b>MFR -</b>  Programas de exercícios para o domicílio</p>
           
         </div>
-        <a href="index.html" class="bg-cyan-700 text-white font-bold px-6 py-2 rounded rounded-1">Início</a>
+        <a href="../index.html" class="bg-cyan-700 text-white font-bold px-6 py-2 rounded rounded-1">Início</a>
       </div>
       <!-- Container wrapper -->
     </nav>
@@ -245,31 +262,102 @@
 
 
         <div id="hidden">
-          <h2 class="text-6xl font-bold text-center py-5 pt-10 text-cyan-900 mt-10">Tendinopatia da Coifa dos Rotadores</h2>
-          <!-- <h2 class="text-4xl font-bold text-center  text-cyan-900 mb-10">Nível básico</h2>   -->
-          <p class="px-6 py-2 rounded-full bg-rose-800 text-white text-center mx-auto w-96 mb-20 mt-5 ">Nível Avançado</p>
-
+          <!-- <h2 class="text-6xl font-bold text-center py-5 pt-10 text-cyan-900 mt-10">Artrose da Anca</h2> -->
+          <!-- <h2 class="text-4xl font-bold text-center  text-cyan-900 mb-10">Pós-operatório</h2>   -->
           <!-- <p class="px-6 py-2 rounded-full bg-rose-800 text-white text-center mx-auto w-96 mb-20 mt-5 ">Nível Avançado</p> -->
-          <p class="text-center py-6 pb-8 "><u>Selecione os exercícios a incorporar no programa</u></p>
+          
+
+  
+          
       </div>
 
 
+      <div id="hidden">
+        <h2 class="text-6xl font-bold text-center py-5 pt-10 text-cyan-900 mt-10">Tendinopatia da Coifa dos Rotadores</h2>
+        <!-- <h2 class="text-4xl font-bold text-center  text-cyan-900 mb-10">Nível básico</h2>   -->
+        <p class="px-6 py-2 rounded-full bg-rose-800 text-white text-center mx-auto w-96 mb-20 mt-5 ">Nível Avançado</p>
 
+        <!-- <p class="px-6 py-2 rounded-full bg-rose-800 text-white text-center mx-auto w-96 mb-20 mt-5 ">Nível Avançado</p> -->
+        <p class="text-center py-6 pb-8 "><u>Selecione os exercícios a incorporar no programa</u></p>
+    </div>
 
       <div id="print-title">
         <p><u>PROGRAMA DE EXERCÍCIOS NO DOMICÍLIO</u></p>
-        <p>Tendinopatia da Coifa dos Rotadores: nível avançado</p>
+        <p>Tendinopatia da coifa dos rotadores - nível avançado</p>
 
       </div>
-
+<!-- 
       <div id="print-subtitle">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, maiores. Alias facilis asperiores eaque autem nostrum fugit voluptates veniam. Ad!</p>
 
-      </div>
+      </div> -->
 
 
 
       <div class="px-20 ">
+
+
+
+        <!-- ----------------------- RECOMENDATIONS BOX ---------------------------------->
+
+
+
+        <div id="individual_card" data-exercise_name="Rotação Externa" class="individual_card bg-amber-100 rounded shadow-md mb-10 ">
+
+          <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
+            <div>
+              <h2 class="">
+                Informação relevante:
+              </h2>
+            </div>
+              <div>
+                <input
+                id="recomendations_box"
+                class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                type="checkbox"
+              /> 
+              </div>
+          </div>
+
+          <div class="flex flex-col bg-white rounded-lg">
+              <div class=" flex px-2 py-6 text-sm text-cyan-700 flex flex-col " >
+                <textarea name="a" id="text_box_input" cols="30" rows="10" class="h-24" wrap="hard">
+- Estes exercícios devem ser realizados após avaliação pelo seu Médico Fisiatra e caso tenha indicação. <br>
+- Deve realizar os exercícios diariamente, de forma calma, pausada com roupa e calçado adequados, num ambiente tranquilo. <br>
+- Os exercícios devem ser executados sem dor podendo, no entanto, sentir algum desconforto. <br>
+- Em caso de alteração de sintomas consulte o seu Médico Fisiatra.<br>
+
+
+                </textarea>
+
+
+              </div>
+            
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <!-- SUBTITLE SECTION -->
         <div id="subtitle" class="section_title mb-10 mt-10  text-zinc-800 text-2xl flex items-center">
@@ -1120,9 +1208,26 @@
 
 
 
+          <!-----------   PRINT   RECOMENDATIONS BOX -------------->
+
+          <div id="print_recomendations" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-2">
+            <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
+              Informação relevante:
+            </h2>
+            <div id="individual_card_body_recomendations" class="flex ">
+              <p id="result_recomendations" class="px-4 pb-4"></p>
+            </div>
+          </div>
+
+
+
+
+
+
+
 
           <!-- Individual card -->
-          <div id="print_page_1" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_1" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-6">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
               Exercício 1
             </h2>
@@ -1149,7 +1254,7 @@
             </div>
           </div>
 
-          <div id="print_page_2" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_2" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-6">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
               Exercício 2
             </h2>
@@ -1176,7 +1281,7 @@
             </div>
           </div>
 
-          <div id="print_page_3" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_3" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-6">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
               Exercício 3
             </h2>
@@ -1203,7 +1308,7 @@
             </div>
           </div>
 
-          <div id="print_page_4" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_4" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-6">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
               Exercício 4
             </h2>
@@ -1230,7 +1335,7 @@
             </div>
           </div>
 
-          <div id="print_page_5" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_5" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-6">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
               Exercício 5
             </h2>
@@ -1257,7 +1362,7 @@
             </div>
           </div>
 
-          <div id="print_page_6" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_6" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-6">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
               Exercício 6
             </h2>
@@ -1284,7 +1389,7 @@
             </div>
           </div>
 
-          <div id="print_page_7" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_7" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-6">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
               Exercício 7
             </h2>
@@ -1311,7 +1416,7 @@
             </div>
           </div>
 
-          <div id="print_page_8" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_8" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-6">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
               Exercício 8
             </h2>
@@ -1338,7 +1443,7 @@
             </div>
           </div>
 
-          <div id="print_page_9" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_9" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-6">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
               Exercício 9
             </h2>
@@ -1365,7 +1470,7 @@
             </div>
           </div>
 
-          <div id="print_page_10" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_10" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-6">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
               Exercício 10
             </h2>
@@ -1392,7 +1497,7 @@
             </div>
           </div>
 
-          <div id="print_page_11" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_11" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-6">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
               Exercício 11
             </h2>
@@ -1419,7 +1524,7 @@
             </div>
           </div>
 
-          <div id="print_page_12" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_12" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-6">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
               Exercício 12
             </h2>
@@ -1446,7 +1551,7 @@
             </div>
           </div>
 
-          <div id="print_page_13" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_13" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-6">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
               Exercício 13
             </h2>
@@ -1473,7 +1578,7 @@
             </div>
           </div>
 
-          <div id="print_page_14" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_14" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-6">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
               Exercício 14
             </h2>
@@ -1500,7 +1605,7 @@
             </div>
           </div>
 
-          <div id="print_page_15" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_15" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-6">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
               Exercício 15
             </h2>
@@ -1527,7 +1632,7 @@
             </div>
           </div>
 
-          <div id="print_page_16" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_16" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-6">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
               Exercício 16
             </h2>
@@ -1554,7 +1659,7 @@
             </div>
           </div>
 
-          <div id="print_page_17" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_17" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-6">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
               Exercício 17
             </h2>
@@ -1581,7 +1686,7 @@
             </div>
           </div>
 
-          <div id="print_page_18" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_18" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-6">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
               Exercício 18
             </h2>
@@ -1608,7 +1713,7 @@
             </div>
           </div>
 
-          <div id="print_page_19" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_19" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-6">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
               Exercício 19
             </h2>
@@ -1635,7 +1740,7 @@
             </div>
           </div>
 
-          <div id="print_page_20" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_20" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-6">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
               Exercício 20
             </h2>
@@ -1662,6 +1767,15 @@
             </div>
           </div>
 
+
+
+
+
+
+
+
+
+          
 
     </div>
 
@@ -1706,6 +1820,23 @@
 
 
   button.addEventListener("click", function () {
+
+          // IF - RECOMENDATIONS
+    if (recomendations_box.checked === true) {
+      print_recomendations.style.display = "inline-block";
+      let text_box_input = document.getElementById("text_box_input").value;
+      let result_recomendations = document.getElementById("result_recomendations");
+      result_recomendations.innerHTML = `${text_box_input}`;
+      console.log(text_box_input.value)
+    } else {
+      print_recomendations.style.display = "none"
+    }
+
+
+
+
+
+
 
     if (exercise_1_input.checked === true) {
       print_page_1.style.display = "block";
@@ -1934,6 +2065,12 @@
 
 
 
+
+
+
+
+
+
     if (exercise_1_input.checked === false &&
     exercise_2_input.checked === false &&
     exercise_3_input.checked === false &&
@@ -1953,7 +2090,8 @@
     exercise_17_input.checked === false &&
     exercise_18_input.checked === false &&
     exercise_19_input.checked === false &&
-    exercise_20_input.checked === false) {
+    exercise_20_input.checked === false &&
+    recomendations_box.checked === false) {
       window.alert("Selecione pelo menos 1 exercício.")
     } else {
       print()
@@ -1988,6 +2126,7 @@
     print_page_18.style.display = "none"
     print_page_19.style.display = "none"
     print_page_20.style.display = "none"
+    print_recomendations.style.display = "none"
 
 
 
