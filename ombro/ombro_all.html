@@ -138,6 +138,13 @@
               width: 100vw;
 
             }
+            #sub_exercises {
+              background-color: #eaeaeaf2 !important;
+              text-align: center;
+              margin: 0;
+              padding: 0;
+              font-weight: bold;
+            }
 
 
 
@@ -387,7 +394,7 @@
             <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
               <div>
                 <h2 class="">
-                  Movimentos pendulares de Codman
+                  Movimentos pendulares
                 </h2>
               </div>
                 <div>
@@ -1269,7 +1276,7 @@
           <!-- Individual card -->
           <div id="print_page_1" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
-              Movimentos pendulares de Codman
+              Movimentos pendulares 
             </h2>
             <div id="individual_card_body" class="flex px-4 py-2">
               <img
@@ -1391,7 +1398,7 @@
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
               Automobilização: flexão do ombro (deitado)
             </h2>
-            <div id="individual_card_body" class="flex p-4">
+            <div id="individual_card_body" class="flex p-4 justify-center items-center">
               <img
                 class="h-40 w-2/5 object-contain"
                 src="../images/ex_5.jpg"
@@ -1406,7 +1413,7 @@
                   <b>Instruções:</b> 
                   Este exercício pode ser feito deitado ou sentado.<br>
                   1) Junte as mãos entrelançando os dedos e com a mão “boa” levante o braço lesionado até acima da cabeça, mantendo os cotovelos o mais esticados possível.<br>
-                  2) Mantenha a posição superior por 10 a 20 segundos.<br>
+                  2) Mantenha a posição por 10 a 20 segundos;<br>
                   3) Retorne lentamente à posição inicial.
                                       
                 </p>
@@ -1422,7 +1429,7 @@
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
               Flexão do ombro ativa-assistida com barra
             </h2>
-            <div id="individual_card_body" class="flex px-4 py-2">
+            <div id="individual_card_body" class="flex px-4 py-2 justify-center items-center">
               <img
                 class="h-40 w-2/5 object-contain"
                 src="../images/ex_6.jpg"
@@ -1438,7 +1445,7 @@
                     Este exercício pode ser realizado sentado ou deitado. Use um cabo de vassoura ou de PVC ou algo semelhante.<br>
                     1) Deite-se de costas, segurando o cabo com as duas mãos, devendo as palmas das mãos devem estar voltadas para baixo; <br>
                     2) Levante lentamente os braços até acima da cabeça, mantendo os cotovelos esticados;<br>
-                    3) Mantenha a posição superior por 10 a 20 segundos;<br>
+                    3) Mantenha a posição por 10 a 20 segundos;<br>
                     4) Retorne lentamente à posição inicial.
                                                             
                   </p>
@@ -1484,32 +1491,39 @@
 
 
           <div id="print_page_8" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
-            <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
-              Movimentos ativos da escápula
-            </h2>
-            <div id="individual_card_body" class="flex px-4 py-2">
+            
+              <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
+                Movimentos ativos da escápula 
+              </h2>
+
+            <div id="individual_card_body" class="flex  py-2 justify-center items-center">
               <img
                 class="h-40 w-2/5 object-contain"
-                src="../images/external_rotation.png"
+                src="../images/ex_8.png"
                 alt=""
                 data-img="../images/internal_rotation.jpg"
               />
               <div class="flex justify-center items-center w-3/5">
                 <div class="pl-6 rounded-b-lg">
-                  <p class="" data-description="Lorem ipsum, dolor sit amet consectetur
-                  adipisicing elit. Officiis dignissimos officia vitae
-                  asperiores ea quis aliquid explicabo id in debitis.">
-                    <b>Instruções:</b> <br>
-                    <u>Exercício A</u>) <br>
-                    - Eleve / encolha os ombros, mantendo a posição por 2-5 segundos;<br>
-                    - Retorne à posição inicial.<br>
-                    <u>Exercício B</u>) <br>
-                    - Leve os seus ombros para a frente, afastando as omoplatas, mantendo a posição por 2-5 segundos;<br>
-                    - Retorne à posição inicial.<br>
-                    <u>Exercício C</u>) <br>
-                    - Leve os seus ombros para trás, aproximando as omoplatas, mantendo a posição por 2-5 segundos;<br>
-                    - Retorne à posição inicial.
-                  </p>
+                    <!-- <b>Instruções:</b> <br> -->
+                    <!-- <b id="sub_exercises" class=" px-4"> Exercício A </b> <br> -->
+                    <p id="sub_exercises" class=" px-4 my-0"> Exercício A - Elevação </p> 
+                    <p class="pl-4">
+                      - Eleve / encolha os ombros. Mantenha a posição por 2-5 segundos;<br>
+                      - Retorne à posição inicial.<br>
+                    </p>
+
+                    <p id="sub_exercises" class=" px-4 my-0"> Exercício B - Protração </p> 
+                    <p class="pl-4">
+                      - Leve os seus ombros para a frente, afastando as omoplatas. Mantenha a posição por 2-5 segundos;<br>
+                      - Retorne à posição inicial.<br>
+                    </p>
+                    <p id="sub_exercises" class=" px-4 my-0"> Exercício C - Retração </p> 
+                    <p class="pl-4 pb-4">
+                      - Leve os seus ombros para trás e aproxime as omoplatas. Mantenga a posição por 2-5 segundos;<br>
+                      - Retorne à posição inicial.  
+                    </p>
+                    <!-- <b id="sub_exercises" class=" px-4"> Exercício C </b> <br> -->
                   <p id="result_s_ex_8"></p>
                 </div>
               </div>
@@ -1522,9 +1536,9 @@
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
               Exercícios de estabilização da escápula: exercício "Y", "W" e "T"
             </h2>
-            <div id="individual_card_body" class="flex px-4 py-2">
+            <div id="individual_card_body" class="flex px-4 py-2 justify-center items-center">
               <img
-                class="h-40 w-2/5 object-contain"
+                class="h-40 w-2/5 object-contain "
                 src="../images/external_rotation.png"
                 alt=""
                 data-img="../images/internal_rotation.jpg"
@@ -1552,7 +1566,7 @@
             </div>
 
 
-            <div id="individual_card_body" class="flex px-4 py-2">
+            <div id="individual_card_body" class="flex px-4 py-2 justify-center items-center">
               <img
                 class="h-40 w-2/5 object-contain"
                 src="../images/external_rotation.png"
@@ -1578,7 +1592,7 @@
             </div>
 
 
-            <div id="individual_card_body" class="flex px-4 py-2">
+            <div id="individual_card_body" class="flex px-4 py-2 justify-center items-center">
               <img
                 class="h-40 w-2/5 object-contain"
                 src="../images/external_rotation.png"
