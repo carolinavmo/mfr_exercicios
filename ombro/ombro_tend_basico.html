@@ -51,6 +51,55 @@
         display: none;
       }
 
+      .green-level {
+        background-color: #65A30D;
+        padding: 6px; 
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border: 1px solid #65A30D; 
+        color: white;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /* .green-level:hover {
+        background-color: #65A30D;
+        color: white;
+      } */
+      .orange-level {
+        background-color: #f59f0b19;
+        padding: 6px; 
+        /* border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px; */
+        border: 1px solid #f59f0bcd; 
+        color: #f59f0b;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .orange-level:hover {
+        background-color: #F59E0B;
+        color: white;
+      }
+      .pink-level {
+        background-color: #9f123a0f;
+        padding: 6px; 
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        border: 1px solid #9f123ac4; 
+        color: #9f123ae6;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .pink-level:hover {
+        background-color: #9F1239;
+        color: white;
+      }
+
 
 
 
@@ -275,7 +324,20 @@
       <div id="hidden">
         <h2 class="text-6xl font-bold text-center py-5 pt-10 text-cyan-900 mt-10">Tendinopatia da Coifa dos Rotadores</h2>
         <!-- <h2 class="text-4xl font-bold text-center  text-cyan-900 mb-10">Nível básico</h2>   -->
-        <p class="px-6 py-2 rounded-full bg-lime-600 text-white text-center mx-auto w-96 mb-20 mt-5 ">Nível Básico</p>
+        <!-- <p class="px-6 py-2 rounded-full bg-lime-600 text-white text-center mx-auto w-96 mb-20 mt-5 ">Nível Básico</p> -->
+        <div style="display: flex; width: 100%; padding-left: 200px; padding-right: 200px; justify-content: space-between; margin-top: 30px; margin-bottom: 30px;">
+          <div class="green-level ">
+            <a href="ombro_tend_basico.html"  style="width: 100%; height: 100%; text-align: center; ">Nível Básico</a>
+          </div>
+          <div class="orange-level ">
+            <a href="ombro_tend_intermedio.html"  style="width: 100%; height: 100%; text-align: center; ">Nível Intermédio</a>
+          </div>
+          <div class="pink-level ">
+            <a href="ombro_tend_avançado.html"  style="width: 100%; height: 100%; text-align: center; ">Nível Avançado</a>
+          </div>
+
+
+        </div>
 
         <!-- <p class="px-6 py-2 rounded-full bg-rose-800 text-white text-center mx-auto w-96 mb-20 mt-5 ">Nível Avançado</p> -->
         <p class="text-center py-6 pb-8 "><u>Esta é apenas uma sugestão de exercícios.<br>Edite os exercícios a incorporar no seu programa.</u></p>
