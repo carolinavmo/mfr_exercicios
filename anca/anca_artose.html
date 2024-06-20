@@ -41,18 +41,32 @@
 
       #print_page_1, #print_page_2, #print_page_3, #print_page_4, #print_page_5, #print_page_6, #print_page_7, #print_page_8, 
       #print_page_9, #print_page_10, #print_page_11, #print_page_12, #print_page_13, #print_page_14, #print_page_15, 
-      #print_page_16, #print_page_17, #print_page_18, #print_page_19, #print_page_20 {
+      #print_page_16, #print_page_17, #print_page_18, #print_page_19, #print_page_20, #print_page_21,#print_page_22, #print_page_23,
+      #print_page_24, #print_page_25, #print_page_26, #print_page_27, #print_page_28, #print_page_29, #print_page_30, #print_recomendations {
         display: none;
         width: 100vw;
         box-shadow: none;   
       }
+
       #print-subtitle {
         display: none;
       }
 
 
+      
 
-          @media print {
+
+          @media print {     
+            
+            #print_page_1, #print_page_2, #print_page_3, #print_page_4, #print_page_5, #print_page_6, #print_page_7, #print_page_8, 
+      #print_page_9, #print_page_10, #print_page_11, #print_page_12, #print_page_13, #print_page_14, #print_page_15, 
+      #print_page_16, #print_page_17, #print_page_18, #print_page_19, #print_page_20, #print_page_21,#print_page_22, #print_page_23,
+      #print_page_24, #print_page_25, #print_page_26, #print_page_27, #print_page_28, #print_page_29, #print_page_30, #print_recomendations {
+        page-break-inside: avoid; 
+      }
+
+
+
             body * {
               -webkit-print-color-adjust: exact !important;   /* Chrome, Safari 6 – 15.3, Edge */
               print-color-adjust: exact !important; 
@@ -92,10 +106,10 @@
               font-size: 12px;
 
             }
-
             @page {
               width: 100vw;
             }
+
             #subtitle {
               font-size: 16px;
               display: none;
@@ -114,7 +128,7 @@
             }
 
             #individual_card_head {
-              background-color: #caf4fff2 !important;
+              background-color: #b2e2eef2 !important;
               color: black;
               font-size: 14px;
               font-weight: bold;
@@ -124,11 +138,20 @@
               background-color: #ffffff;
               color: black;
               box-shadow: none;
-
-              font-size: 12px;
+              font-size: 11px;
               width: 100vw;
 
             }
+            #sub_exercises {
+              background-color: #eaeaeaf2 !important;
+              text-align: center;
+              margin: 0;
+              padding: 0;
+              font-weight: bold;
+            }
+
+
+
             input {
               display: none;
             }
@@ -139,12 +162,49 @@
               display: none;
             }
 
+            #individual_card_body_recomendations {
+              background-color: #b2e2eef2 !important;
+              color: black;
+              box-shadow: none;
+              font-size: 11px;
+              width: 100vw;
+              
 
+
+            }
+            #not_computer {
+              display: none;
+            }
 
 
 
 
     }
+
+
+
+
+    #not_computer {
+      display: none;
+    }
+    @media only screen and (max-width: 600px) {
+      #not_computer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 100vw;
+        height: 100%;
+        background-color: #ffffff;
+        color: rgb(21, 21, 21);
+        font-size: 16px;
+        z-index: 10000000;
+        padding-left: 10px;
+        padding-right: 10px;
+
+
+      }
+}
     </style>
 
 
@@ -152,6 +212,17 @@
 
   </head>
   <body>
+
+    <div id="not_computer">
+      <div class=" bg-amber-200 flex flex-col justify-center items-center py-10 px-2">
+        <h1 class="text-center" >
+          MFR - Programas de exercícios para o domicílio
+        </h1>
+        <h3 class="pt-4 font-bold">Apenas disponível em computador!</h3>
+  
+      </div>
+    </div>
+
     <div id="navbar">
       <nav
       class="relative flex w-full items-center justify-between bg-zinc-800 py-6 shadow-sm shadow-neutral-700/10 dark:bg-neutral-800 dark:shadow-black/30 lg:flex-wrap lg:justify-start"
@@ -162,7 +233,7 @@
         <div class="flex items-center">
 
           <!-- Navbar Brand -->
-          <a class="text-primary dark:text-primary-400" href="index.html">
+          <a class="text-primary dark:text-primary-400" href="../index.html">
             <span
               class="[&>svg]:ml-2 [&>svg]:mr-3 [&>svg]:h-6 [&>svg]:w-6 [&>svg]:lg:ml-0"
             >
@@ -174,7 +245,7 @@
           <p class="text-white"><b>MFR -</b>  Programas de exercícios para o domicílio</p>
           
         </div>
-        <a href="index.html" class="bg-cyan-700 text-white font-bold px-6 py-2 rounded rounded-1">Início</a>
+        <a href="../index.html" class="bg-cyan-700 text-white font-bold px-6 py-2 rounded rounded-1">Início</a>
       </div>
       <!-- Container wrapper -->
     </nav>
@@ -245,8 +316,8 @@
 
 
         <div id="hidden">
-          <h2 class="text-6xl font-bold text-center py-5 pt-10 text-cyan-900 mt-10">Fratura da Anca</h2>
-          <h2 class="text-4xl font-bold text-center  text-cyan-900 mb-10">Pós-operatório</h2>  
+          <h2 class="text-6xl font-bold text-center py-5 pt-10 text-cyan-900 mt-10">Coxartrose</h2>
+          <!-- <h2 class="text-3xl font-bold text-center  text-cyan-900 mb-10" >[ tratamento convervador ]</h2>   -->
           <!-- <p class="px-6 py-2 rounded-full bg-rose-800 text-white text-center mx-auto w-96 mb-20 mt-5 ">Nível Avançado</p> -->
           <p class="text-center py-6 pb-8 "><u>Selecione os exercícios a incorporar no programa</u></p>
       </div>
@@ -254,20 +325,85 @@
 
 
 
+
       <div id="print-title">
         <p><u>PROGRAMA DE EXERCÍCIOS NO DOMICÍLIO</u></p>
-        <p>Fratura da Anca: pós operatório</p>
+        <p>Anca</p>
 
       </div>
-
+<!-- 
       <div id="print-subtitle">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, maiores. Alias facilis asperiores eaque autem nostrum fugit voluptates veniam. Ad!</p>
 
-      </div>
+      </div> -->
 
 
 
       <div class="px-20 ">
+
+
+
+        <!-- ----------------------- RECOMENDATIONS BOX ---------------------------------->
+
+
+
+        <div id="individual_card" data-exercise_name="Rotação Externa" class="individual_card rounded shadow-md mb-10 ">
+
+          <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
+            <div>
+              <h2 class="">
+                Notas introdutórias:
+              </h2>
+            </div>
+              <div>
+                <input
+                id="recomendations_box"
+                class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.1rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                type="checkbox"
+                checked="true"
+              /> 
+              </div>
+          </div>
+
+          <div class="flex flex-col bg-white rounded-lg px-4">
+              <div class=" flex px-2 py-6 text-sm  flex flex-col" >
+                <textarea name="a" id="text_box_input" cols="30" rows="10" class="h-24" wrap="hard" maxlength="450" >
+- Estes exercícios devem ser realizados após avaliação pelo seu Médico Fisiatra e caso tenha indicação. <br>
+- Deve realizar os exercícios diariamente, de forma calma, pausada com roupa e calçado adequados, num ambiente tranquilo. <br>
+- Os exercícios devem ser executados sem dor podendo, no entanto, sentir algum desconforto. <br>
+- Em caso de alteração de sintomas consulte o seu Médico Fisiatra.<br>
+
+
+                </textarea>
+
+
+              </div>
+            
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <!-- SUBTITLE SECTION -->
         <div id="subtitle" class="section_title mb-10 mt-10  text-zinc-800 text-2xl flex items-center">
@@ -277,7 +413,7 @@
 
 
         <!-- SUBSECTION CARDS CONTAINER -->
-        <div class="flex flex-wrap justify-between" > 
+        <div class="flex flex-wrap justify-evenly gap-10" > 
 
 
           <!-- Individual card ---- EX 1 -->
@@ -286,7 +422,7 @@
             <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
               <div>
                 <h2 class="">
-                  Exercício 1
+                  Flexão ativa da anca <br>(supino)
                 </h2>
               </div>
                 <div>
@@ -294,18 +430,15 @@
                   id="exercise_1_input"
                   class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                   type="checkbox"
+                  checked="true"
                 /> 
                 </div>
+
 
             </div>
 
             <div class="flex flex-col bg-white rounded-lg">
-              <img
-                class="h-40 w-72 object-contain rounded-b-lg"
-                src="../images/external_rotation.png"
-                alt=""
-                data-img="../images/external_rotation.png"
-              />
+              <img src="../images_anca/ex_1.jpg" alt="" class="h-40 w-72 object-contain rounded-b-lg">
               <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
                 <div class="w-2/4 flex pl-6" >
                   <label for="s_ex_1">Séries</label>
@@ -313,7 +446,7 @@
                 </div>
                 <div class="w-2/4 flex ">
                   <label for="r_ex_1">Repetições</label>
-                  <input id="r_ex_1" value=15 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                  <input id="r_ex_1" value=12 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
                 </div>
               </div>
             </div>
@@ -326,7 +459,7 @@
             <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
               <div>
                 <h2 class="">
-                  Exercício 2
+                  Abdução ativa da anca <br> (supino)
                 </h2>
               </div>
                 <div>
@@ -334,6 +467,7 @@
                   id="exercise_2_input"
                   class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                   type="checkbox"
+                  checked="true"
                 /> 
                 </div>
 
@@ -342,9 +476,9 @@
             <div class="flex flex-col bg-white rounded-lg">
               <img
                 class="h-40 w-72 object-contain rounded-b-lg"
-                src="../images/external_rotation.png"
+                src="../images_anca/ex_2.jpg"
                 alt=""
-                data-img="../images/external_rotation.png"
+                data-img="../images_anca/external_rotation.png"
               />
               <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
                 <div class="w-2/4 flex pl-6" >
@@ -353,7 +487,7 @@
                 </div>
                 <div class="w-2/4 flex ">
                   <label for="r_ex_2">Repetições</label>
-                  <input id="r_ex_2" value=15 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                  <input id="r_ex_2" value=12 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
                 </div>
               </div>
             </div>
@@ -365,7 +499,7 @@
             <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
               <div class="">
                 <h2 >
-                  Exercício 3
+                  Extensão ativa da anca <br>(ventral)
                 </h2>
               </div>
                 <div>
@@ -373,6 +507,7 @@
                   id="exercise_3_input"
                   class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                   type="checkbox"
+                  checked="true"
                 /> 
                 </div>
 
@@ -381,9 +516,9 @@
             <div class="flex flex-col bg-white rounded-lg">
               <img
                 class="h-40 w-72 object-contain rounded-b-lg"
-                src="../images/external_rotation.png"
+                src="../images_anca/ex_3.jpg"
                 alt=""
-                data-img="../images/external_rotation.png"
+                data-img="../images_anca/external_rotation.png"
               />
               <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
                 <div class="w-2/4 flex pl-6" >
@@ -392,7 +527,7 @@
                 </div>
                 <div class="w-2/4 flex ">
                   <label for="r_ex_3">Repetições</label>
-                  <input id="r_ex_3" value=15 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                  <input id="r_ex_3" value=12 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
                 </div>
               </div>
             </div>
@@ -404,7 +539,7 @@
             <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
               <div>
                 <h2 class="">
-                  Exercício 4
+                  Extensão ativa da anca <br> (lateral)
                 </h2>
               </div>
                 <div>
@@ -412,6 +547,7 @@
                   id="exercise_4_input"
                   class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                   type="checkbox"
+                  checked="true"
                 /> 
                 </div>
 
@@ -420,9 +556,9 @@
             <div class="flex flex-col bg-white rounded-lg">
               <img
                 class="h-40 w-72 object-contain rounded-b-lg"
-                src="../images/external_rotation.png"
+                src="../images_anca/ex_4.jpg"
                 alt=""
-                data-img="../images/external_rotation.png"
+                data-img="../images_anca/external_rotation.png"
               />
               <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
                 <div class="w-2/4 flex pl-6" >
@@ -431,7 +567,7 @@
                 </div>
                 <div class="w-2/4 flex ">
                   <label for="r_ex_4">Repetições</label>
-                  <input id="r_ex_4" value=15 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                  <input id="r_ex_4" value=12 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
                 </div>
               </div>
             </div>
@@ -444,7 +580,7 @@
             <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
               <div>
                 <h2 class="">
-                  Exercício 5
+                  Rotação externa ativa <br>(decúbito lateral)
                 </h2>
               </div>
                 <div>
@@ -452,6 +588,7 @@
                   id="exercise_5_input"
                   class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                   type="checkbox"
+                  checked="true"
                 /> 
                 </div>
 
@@ -460,9 +597,9 @@
             <div class="flex flex-col bg-white rounded-lg">
               <img
                 class="h-40 w-72 object-contain rounded-b-lg"
-                src="../images/external_rotation.png"
+                src="../images_anca/ex_5.jpg"
                 alt=""
-                data-img="../images/external_rotation.png"
+                data-img="../images_anca/ex_5.png"
               />
               <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
                 <div class="w-2/4 flex pl-6" >
@@ -471,7 +608,7 @@
                 </div>
                 <div class="w-2/4 flex ">
                   <label for="r_ex_5">Repetições</label>
-                  <input id="r_ex_5" value=15 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                  <input id="r_ex_5" value=12 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
                 </div>
               </div>
             </div>
@@ -483,7 +620,7 @@
             <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
               <div class="">
                 <h2 >
-                  Exercício 6
+                  Rotação ativa do tronco <br>(supino)
                 </h2>
               </div>
                 <div>
@@ -499,9 +636,9 @@
             <div class="flex flex-col bg-white rounded-lg">
               <img
                 class="h-40 w-72 object-contain rounded-b-lg"
-                src="../images/external_rotation.png"
+                src="../images_anca/ex_6.jpg"
                 alt=""
-                data-img="../images/external_rotation.png"
+                data-img="../images_anca/ex_6.png"
               />
               <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
                 <div class="w-2/4 flex pl-6" >
@@ -510,7 +647,7 @@
                 </div>
                 <div class="w-2/4 flex ">
                   <label for="r_ex_6">Repetições</label>
-                  <input id="r_ex_6" value=15 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                  <input id="r_ex_6" value=12 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
                 </div>
               </div>
             </div>
@@ -522,7 +659,7 @@
             <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
               <div>
                 <h2 class="">
-                  Exercício 7
+                  "Ankle slides" <br> (supino)
                 </h2>
               </div>
                 <div>
@@ -538,9 +675,9 @@
             <div class="flex flex-col bg-white rounded-lg">
               <img
                 class="h-40 w-72 object-contain rounded-b-lg"
-                src="../images/external_rotation.png"
+                src="../images_anca/ex_7.jpg"
                 alt=""
-                data-img="../images/external_rotation.png"
+                data-img="../images_anca/ex_7"
               />
               <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
                 <div class="w-2/4 flex pl-6" >
@@ -549,20 +686,24 @@
                 </div>
                 <div class="w-2/4 flex ">
                   <label for="r_ex_7">Repetições</label>
-                  <input id="r_ex_7" value=15 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                  <input id="r_ex_7" value=12 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
                 </div>
               </div>
             </div>
           </div>
 
 
+
+
+
+ 
           <!-- Individual card ---- EX 8 -->
           <div id="individual_card" data-exercise_name="Rotação Externa" class="individual_card bg-amber-100 w-72 rounded shadow-md mb-10 ">
 
             <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
               <div>
                 <h2 class="">
-                  Exercício 8
+                  Flexão e extensão ativas do tornozelo
                 </h2>
               </div>
                 <div>
@@ -578,9 +719,9 @@
             <div class="flex flex-col bg-white rounded-lg">
               <img
                 class="h-40 w-72 object-contain rounded-b-lg"
-                src="../images/external_rotation.png"
+                src="../images_anca/ex_8.jpg"
                 alt=""
-                data-img="../images/external_rotation.png"
+                data-img="../images_anca/external_rotation.png"
               />
               <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
                 <div class="w-2/4 flex pl-6" >
@@ -589,11 +730,36 @@
                 </div>
                 <div class="w-2/4 flex ">
                   <label for="r_ex_8">Repetições</label>
-                  <input id="r_ex_8" value=15 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                  <input id="r_ex_8" value=12 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
                 </div>
               </div>
             </div>
           </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+        
+        <!-- SUBTITLE SECTION ----------------- FORTALECIMENTO MUSCULAR-->
+
+        <div  id="subtitle" class="section_title mb-10 mt-10  text-zinc-800 text-2xl flex items-center ">
+          <!-- <img width="60" height="60" src="../images/icons8-curls-with-dumbbells-80(1).png" alt="curls-with-dumbbells"/>  -->
+          <p class="pl-4 py-2 font-bold bg-amber-200 w-full ">Fortalecimento muscular</p>
+        </div>
+
+
+          <!-- SUBSECTION CARDS CONTAINER -->
+          <div class="flex flex-wrap justify-evenly gap-10" > 
+
+
+
 
           <!-- Individual card ---- EX 9 -->
           <div id="individual_card" data-exercise_name="Rotação Externa" class="individual_card bg-amber-100 w-72 rounded shadow-md mb-10 ">
@@ -601,7 +767,7 @@
             <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
               <div class="">
                 <h2 >
-                  Exercício 9
+                  Contração isométrica do quadricípite
                 </h2>
               </div>
                 <div>
@@ -609,6 +775,7 @@
                   id="exercise_9_input"
                   class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                   type="checkbox"
+
                 /> 
                 </div>
 
@@ -617,9 +784,9 @@
             <div class="flex flex-col bg-white rounded-lg">
               <img
                 class="h-40 w-72 object-contain rounded-b-lg"
-                src="../images/external_rotation.png"
+                src="../images_anca/ex_9.jpg"
                 alt=""
-                data-img="../images/external_rotation.png"
+                data-img="../images_anca/external_rotation.png"
               />
               <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
                 <div class="w-2/4 flex pl-6" >
@@ -628,11 +795,34 @@
                 </div>
                 <div class="w-2/4 flex ">
                   <label for="r_ex_9">Repetições</label>
-                  <input id="r_ex_9" value=15 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                  <input id="r_ex_9" value=12 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
                 </div>
               </div>
             </div>
           </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
           <!-- Individual card ---- EX 10 -->
           <div id="individual_card" data-exercise_name="Rotação Externa" class="individual_card bg-amber-100 w-72 rounded shadow-md mb-10 ">
@@ -640,7 +830,7 @@
             <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
               <div>
                 <h2 class="">
-                  Exercício 10
+                  Contração isométrica dos glúteos
                 </h2>
               </div>
                 <div>
@@ -648,6 +838,7 @@
                   id="exercise_10_input"
                   class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                   type="checkbox"
+                  checked="true"
                 /> 
                 </div>
 
@@ -656,9 +847,9 @@
             <div class="flex flex-col bg-white rounded-lg">
               <img
                 class="h-40 w-72 object-contain rounded-b-lg"
-                src="../images/external_rotation.png"
+                src="../images_anca/ex_10.jpg"
                 alt=""
-                data-img="../images/external_rotation.png"
+                data-img="../images_anca/external_rotation.png"
               />
               <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
                 <div class="w-2/4 flex pl-6" >
@@ -667,7 +858,7 @@
                 </div>
                 <div class="w-2/4 flex ">
                   <label for="r_ex_10">Repetições</label>
-                  <input id="r_ex_10" value=15 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                  <input id="r_ex_10" value=12 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
                 </div>
               </div>
             </div>
@@ -680,7 +871,7 @@
             <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
               <div>
                 <h2 class="">
-                  Exercício 11
+                  Flexão, extensão e abdução ativas da anca (de pé)
                 </h2>
               </div>
                 <div>
@@ -688,6 +879,7 @@
                   id="exercise_11_input"
                   class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                   type="checkbox"
+                  checked="true"
                 /> 
                 </div>
 
@@ -696,9 +888,9 @@
             <div class="flex flex-col bg-white rounded-lg">
               <img
                 class="h-40 w-72 object-contain rounded-b-lg"
-                src="../images/external_rotation.png"
+                src="../images_anca/ex_11.jpg"
                 alt=""
-                data-img="../images/external_rotation.png"
+                data-img="../images_anca/external_rotation.png"
               />
               <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
                 <div class="w-2/4 flex pl-6" >
@@ -707,11 +899,13 @@
                 </div>
                 <div class="w-2/4 flex ">
                   <label for="r_ex_11">Repetições</label>
-                  <input id="r_ex_11" value=15 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                  <input id="r_ex_11" value=12 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
                 </div>
               </div>
             </div>
           </div>
+
+
 
           <!-- Individual card ---- EX 12 -->
           <div id="individual_card" data-exercise_name="Rotação Externa" class="individual_card bg-amber-100 w-72 rounded shadow-md mb-10 ">
@@ -719,7 +913,7 @@
             <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
               <div class="">
                 <h2 >
-                  Exercício 12
+                  Mini agachamento
                 </h2>
               </div>
                 <div>
@@ -727,6 +921,7 @@
                   id="exercise_12_input"
                   class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                   type="checkbox"
+                  checked="true"
                 /> 
                 </div>
 
@@ -735,9 +930,9 @@
             <div class="flex flex-col bg-white rounded-lg">
               <img
                 class="h-40 w-72 object-contain rounded-b-lg"
-                src="../images/external_rotation.png"
+                src="../images_anca/ex_12.jpg"
                 alt=""
-                data-img="../images/external_rotation.png"
+                data-img="../images_anca/external_rotation.png"
               />
               <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
                 <div class="w-2/4 flex pl-6" >
@@ -746,30 +941,14 @@
                 </div>
                 <div class="w-2/4 flex ">
                   <label for="r_ex_12">Repetições</label>
-                  <input id="r_ex_12" value=15 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                  <input id="r_ex_12" value=12 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
                 </div>
               </div>
             </div>
           </div>
 
 
-        </div>
 
-
-
-
-
-        
-        <!-- SUBTITLE SECTION -->
-
-        <div  id="subtitle" class="section_title mb-10 mt-10  text-zinc-800 text-2xl flex items-center ">
-          <!-- <img width="60" height="60" src="../images/icons8-curls-with-dumbbells-80(1).png" alt="curls-with-dumbbells"/>  -->
-          <p class="pl-4 py-2 font-bold bg-amber-200 w-full ">Fortalecimento muscular</p>
-        </div>
-
-
-      <!-- SUBSECTION CARDS CONTAINER -->
-      <div class="flex flex-wrap justify-between" > 
 
   <!-- Individual card ---- EX 13 -->
           <div id="individual_card" data-exercise_name="Rotação Externa" class="individual_card bg-amber-100 w-72 rounded shadow-md mb-10 ">
@@ -777,7 +956,7 @@
             <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
               <div>
                 <h2 class="">
-                  Exercício 13
+                  Agachamento na cadeira
                 </h2>
               </div>
                 <div>
@@ -785,6 +964,7 @@
                   id="exercise_13_input"
                   class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                   type="checkbox"
+                  checked="true"
                 /> 
                 </div>
 
@@ -793,9 +973,9 @@
             <div class="flex flex-col bg-white rounded-lg">
               <img
                 class="h-40 w-72 object-contain rounded-b-lg"
-                src="../images/external_rotation.png"
+                src="../images_anca/ex_13.jpg"
                 alt=""
-                data-img="../images/external_rotation.png"
+                data-img="../images_anca/external_rotation.png"
               />
               <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
                 <div class="w-2/4 flex pl-6" >
@@ -804,7 +984,7 @@
                 </div>
                 <div class="w-2/4 flex ">
                   <label for="r_ex_13">Repetições</label>
-                  <input id="r_ex_13" value=15 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                  <input id="r_ex_13" value=12 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
                 </div>
               </div>
             </div>
@@ -817,7 +997,7 @@
             <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
               <div>
                 <h2 class="">
-                  Exercício 14
+                  Ponte <br>(supino)
                 </h2>
               </div>
                 <div>
@@ -825,6 +1005,7 @@
                   id="exercise_14_input"
                   class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                   type="checkbox"
+                  checked="true"
                 /> 
                 </div>
 
@@ -833,9 +1014,9 @@
             <div class="flex flex-col bg-white rounded-lg">
               <img
                 class="h-40 w-72 object-contain rounded-b-lg"
-                src="../images/external_rotation.png"
+                src="../images_anca/ex_14.jpg"
                 alt=""
-                data-img="../images/external_rotation.png"
+                data-img="../images_anca/external_rotation.png"
               />
               <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
                 <div class="w-2/4 flex pl-6" >
@@ -844,7 +1025,7 @@
                 </div>
                 <div class="w-2/4 flex ">
                   <label for="r_ex_14">Repetições</label>
-                  <input id="r_ex_14" value=15 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                  <input id="r_ex_14" value=12 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
                 </div>
               </div>
             </div>
@@ -856,7 +1037,7 @@
             <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
               <div class="">
                 <h2 >
-                  Exercício 15
+                  Rotação externa da anca com banda elástica (decúbito lateral)
                 </h2>
               </div>
                 <div>
@@ -872,9 +1053,9 @@
             <div class="flex flex-col bg-white rounded-lg">
               <img
                 class="h-40 w-72 object-contain rounded-b-lg"
-                src="../images/external_rotation.png"
+                src="../images_anca/ex_15.jpg"
                 alt=""
-                data-img="../images/external_rotation.png"
+                data-img="../images_anca/external_rotation.png"
               />
               <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
                 <div class="w-2/4 flex pl-6" >
@@ -883,19 +1064,19 @@
                 </div>
                 <div class="w-2/4 flex ">
                   <label for="r_ex_15">Repetições</label>
-                  <input id="r_ex_15" value=15 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                  <input id="r_ex_15" value=12 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- Individual card ---- EX 16 -->
-          <div id="individual_card" data-exercise_name="Rotação Externa" class="individual_card bg-amber-100 w-72 rounded shadow-md mb-10 ">
+          <!-- <div id="individual_card" data-exercise_name="Rotação Externa" class="individual_card bg-amber-100 w-72 rounded shadow-md mb-10 ">
 
             <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
               <div>
                 <h2 class="">
-                  Exercício 16
+                  Push-up na cadeira
                 </h2>
               </div>
                 <div>
@@ -911,9 +1092,9 @@
             <div class="flex flex-col bg-white rounded-lg">
               <img
                 class="h-40 w-72 object-contain rounded-b-lg"
-                src="../images/external_rotation.png"
+                src="../images_anca/ex_16.jpg"
                 alt=""
-                data-img="../images/external_rotation.png"
+                data-img="../images_anca/external_rotation.png"
               />
               <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
                 <div class="w-2/4 flex pl-6" >
@@ -922,25 +1103,53 @@
                 </div>
                 <div class="w-2/4 flex ">
                   <label for="r_ex_16">Repetições</label>
-                  <input id="r_ex_16" value=15 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                  <input id="r_ex_16" value=12 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
 
-          <!-- Individual card ---- EX 17 -->
+
+
+
+
+        </div>
+
+
+
+
+
+        
+        <!-- SUBTITLE SECTION ----------------- PROPRIOCETIVO-->
+
+        <div  id="subtitle" class="section_title mb-10 mt-10  text-zinc-800 text-2xl flex items-center ">
+          <!-- <img width="60" height="60" src="../images/icons8-curls-with-dumbbells-80(1).png" alt="curls-with-dumbbells"/>  -->
+          <p class="pl-4 py-2 font-bold bg-amber-200 w-full ">Treino Propriocetivo</p>
+        </div>
+
+
+          <!-- SUBSECTION CARDS CONTAINER -->
+          <div class="flex flex-wrap justify-evenly gap-10" > 
+
+
+
+
+
+
+
+          <!-- Individual card ---- EX 25 -->
           <div id="individual_card" data-exercise_name="Rotação Externa" class="individual_card bg-amber-100 w-72 rounded shadow-md mb-10 ">
 
             <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
               <div>
                 <h2 class="">
-                  Exercício 17
+                  Apoio unipodal
                 </h2>
               </div>
                 <div>
                   <input
-                  id="exercise_17_input"
+                  id="exercise_25_input"
                   class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                   type="checkbox"
                 /> 
@@ -951,7 +1160,196 @@
             <div class="flex flex-col bg-white rounded-lg">
               <img
                 class="h-40 w-72 object-contain rounded-b-lg"
-                src="../images/external_rotation.png"
+                src="../images_anca/ex_25.jpg"
+                alt=""
+                data-img="../images/external_rotation.png"
+              />
+              <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
+                <div class="w-2/4 flex pl-6" >
+                  <label for="s_ex_20">Séries</label>
+                  <input id="s_ex_25" value=1 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number"  min="1" max="10"></input>
+                </div>
+                <div class="w-2/4 flex ">
+                  <label for="r_ex_20">Repetições</label>
+                  <input id="r_ex_25" value=3 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Individual card ---- EX 26 -->
+          <div id="individual_card" data-exercise_name="Rotação Externa" class="individual_card bg-amber-100 w-72 rounded shadow-md mb-10 ">
+
+            <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
+              <div>
+                <h2 class="">
+                  Apoio unipodal com almofada
+                </h2>
+              </div>
+                <div>
+                  <input
+                  id="exercise_26_input"
+                  class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                  type="checkbox"
+                /> 
+                </div>
+
+            </div>
+
+            <div class="flex flex-col bg-white rounded-lg">
+              <img
+                class="h-40 w-72 object-contain rounded-b-lg"
+                src="../images_anca/ex_26.jpg"
+                alt=""
+                data-img="../images/external_rotation.png"
+              />
+              <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
+                <div class="w-2/4 flex pl-6" >
+                  <label for="s_ex_20">Séries</label>
+                  <input id="s_ex_26" value=1 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number"  min="1" max="10"></input>
+                </div>
+                <div class="w-2/4 flex ">
+                  <label for="r_ex_20">Repetições</label>
+                  <input id="r_ex_26" value=3 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Individual card ---- EX 27 -->
+          <div id="individual_card" data-exercise_name="Rotação Externa" class="individual_card bg-amber-100 w-72 rounded shadow-md mb-10 ">
+
+            <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
+              <div>
+                <h2 class="">
+                  Agachamento unipodal
+                </h2>
+              </div>
+                <div>
+                  <input
+                  id="exercise_27_input"
+                  class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                  type="checkbox"
+                /> 
+                </div>
+
+            </div>
+
+            <div class="flex flex-col bg-white rounded-lg">
+              <img
+                class="h-40 w-72 object-contain rounded-b-lg"
+                src="../images_anca/ex_27.jpg"
+                alt=""
+                data-img="../images/external_rotation.png"
+              />
+              <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
+                <div class="w-2/4 flex pl-6" >
+                  <label for="s_ex_20">Séries</label>
+                  <input id="s_ex_27" value=1 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number"  min="1" max="10"></input>
+                </div>
+                <div class="w-2/4 flex ">
+                  <label for="r_ex_20">Repetições</label>
+                  <input id="r_ex_27" value=3 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Individual card ---- EX 29 -->
+          <div id="individual_card" data-exercise_name="Rotação Externa" class="individual_card bg-amber-100 w-72 rounded shadow-md mb-10 ">
+
+            <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
+              <div>
+                <h2 class="">
+                  Exercício do relógio
+                </h2>
+              </div>
+                <div>
+                  <input
+                  id="exercise_29_input"
+                  class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                  type="checkbox"
+                /> 
+                </div>
+
+            </div>
+
+            <div class="flex flex-col bg-white rounded-lg">
+              <img
+                class="h-40 w-72 object-contain rounded-b-lg"
+                src="../images_anca/ex_29.jpg"
+                alt=""
+                data-img="../images/external_rotation.png"
+              />
+              <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
+                <div class="w-2/4 flex pl-6" >
+                  <label for="s_ex_20">Séries</label>
+                  <input id="s_ex_29" value=1 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number"  min="1" max="10"></input>
+                </div>
+                <div class="w-2/4 flex ">
+                  <label for="r_ex_20">Repetições</label>
+                  <input id="r_ex_29" value=3 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+        
+        <!-- SUBTITLE SECTION ----------------- FLEXIBILIDADE-->
+
+        <div  id="subtitle" class="section_title mb-10 mt-10  text-zinc-800 text-2xl flex items-center ">
+          <!-- <img width="60" height="60" src="../images/icons8-curls-with-dumbbells-80(1).png" alt="curls-with-dumbbells"/>  -->
+          <p class="pl-4 py-2 font-bold bg-amber-200 w-full ">Flexibilidade</p>
+        </div>
+
+
+          <!-- SUBSECTION CARDS CONTAINER -->
+          <div class="flex flex-wrap justify-evenly gap-10" > 
+
+
+
+
+
+
+
+
+          <!-- Individual card ---- EX 17 -->
+          <div id="individual_card" data-exercise_name="Rotação Externa" class="individual_card bg-amber-100 w-72 rounded shadow-md mb-10 ">
+
+            <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
+              <div>
+                <h2 class="">
+                  Alongamento: <br>flexores da anca
+                </h2>
+              </div>
+                <div>
+                  <input
+                  id="exercise_17_input"
+                  class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                  type="checkbox"
+                  checked="true"
+                /> 
+                </div>
+
+            </div>
+
+            <div class="flex flex-col bg-white rounded-lg">
+              <img
+                class="h-40 w-72 object-contain rounded-b-lg"
+                src="../images_anca/ex_17.jpg"
                 alt=""
                 data-img="../images/external_rotation.png"
               />
@@ -962,19 +1360,21 @@
                 </div>
                 <div class="w-2/4 flex ">
                   <label for="r_ex_17">Repetições</label>
-                  <input id="r_ex_17" value=15 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                  <input id="r_ex_17" value=12 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
                 </div>
               </div>
             </div>
           </div>
 
+
+          
           <!-- Individual card ---- EX 18 -->
           <div id="individual_card" data-exercise_name="Rotação Externa" class="individual_card bg-amber-100 w-72 rounded shadow-md mb-10 ">
 
             <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
               <div class="">
                 <h2 >
-                  Exercício 18
+                  Alongamento: glúteos <br>(sentado)
                 </h2>
               </div>
                 <div>
@@ -982,6 +1382,7 @@
                   id="exercise_18_input"
                   class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                   type="checkbox"
+                  checked="true"
                 /> 
                 </div>
 
@@ -990,18 +1391,18 @@
             <div class="flex flex-col bg-white rounded-lg">
               <img
                 class="h-40 w-72 object-contain rounded-b-lg"
-                src="../images/external_rotation.png"
+                src="../images_anca/ex_18.jpg"
                 alt=""
                 data-img="../images/external_rotation.png"
               />
               <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
                 <div class="w-2/4 flex pl-6" >
                   <label for="s_ex_18">Séries</label>
-                  <input id="s_ex_18" value=3 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number"  min="1" max="10"></input>
+                  <input id="s_ex_18" value=1 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number"  min="1" max="10"></input>
                 </div>
                 <div class="w-2/4 flex ">
                   <label for="r_ex_18">Repetições</label>
-                  <input id="r_ex_18" value=15 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                  <input id="r_ex_18" value=3 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
                 </div>
               </div>
             </div>
@@ -1013,7 +1414,7 @@
             <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
               <div>
                 <h2 class="">
-                  Exercício 19
+                  Alongamento: glúteos <br>(supino)
                 </h2>
               </div>
                 <div>
@@ -1029,18 +1430,18 @@
             <div class="flex flex-col bg-white rounded-lg">
               <img
                 class="h-40 w-72 object-contain rounded-b-lg"
-                src="../images/external_rotation.png"
+                src="../images_anca/ex_19.jpg"
                 alt=""
                 data-img="../images/external_rotation.png"
               />
               <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
                 <div class="w-2/4 flex pl-6" >
                   <label for="s_ex_19">Séries</label>
-                  <input id="s_ex_19" value=3 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number"  min="1" max="10"></input>
+                  <input id="s_ex_19" value=1 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number"  min="1" max="10"></input>
                 </div>
                 <div class="w-2/4 flex ">
                   <label for="r_ex_19">Repetições</label>
-                  <input id="r_ex_19" value=15 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                  <input id="r_ex_19" value=3 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
                 </div>
               </div>
             </div>
@@ -1053,12 +1454,54 @@
             <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
               <div>
                 <h2 class="">
-                  Exercício 20
+                  Alongamento: isquiotibiais <br> (de pé)
                 </h2>
               </div>
                 <div>
                   <input
                   id="exercise_20_input"
+                  class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                  type="checkbox"
+                  checked="true"
+                /> 
+                </div>
+
+            </div>
+
+            <div class="flex flex-col bg-white rounded-lg">
+              <img
+                class="h-40 w-72 object-contain rounded-b-lg"
+                src="../images_anca/ex_20.jpg"
+                alt=""
+                data-img="../images/external_rotation.png"
+              />
+              <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
+                <div class="w-2/4 flex pl-6" >
+                  <label for="s_ex_20">Séries</label>
+                  <input id="s_ex_20" value=1 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number"  min="1" max="10"></input>
+                </div>
+                <div class="w-2/4 flex ">
+                  <label for="r_ex_20">Repetições</label>
+                  <input id="r_ex_20" value=3 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- Individual card ---- EX 21 -->
+          <div id="individual_card" data-exercise_name="Rotação Externa" class="individual_card bg-amber-100 w-72 rounded shadow-md mb-10 ">
+
+            <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
+              <div>
+                <h2 class="">
+                  Alongamento: isquiotibiais <br>(supino)
+                </h2>
+              </div>
+                <div>
+                  <input
+                  id="exercise_21_input"
                   class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                   type="checkbox"
                 /> 
@@ -1069,22 +1512,150 @@
             <div class="flex flex-col bg-white rounded-lg">
               <img
                 class="h-40 w-72 object-contain rounded-b-lg"
-                src="../images/external_rotation.png"
+                src="../images_anca/ex_21.jpg"
                 alt=""
                 data-img="../images/external_rotation.png"
               />
               <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
                 <div class="w-2/4 flex pl-6" >
                   <label for="s_ex_20">Séries</label>
-                  <input id="s_ex_20" value=3 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number"  min="1" max="10"></input>
+                  <input id="s_ex_21" value=1 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number"  min="1" max="10"></input>
                 </div>
                 <div class="w-2/4 flex ">
                   <label for="r_ex_20">Repetições</label>
-                  <input id="r_ex_20" value=15 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                  <input id="r_ex_21" value=3 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Individual card ---- EX 22 -->
+          <div id="individual_card" data-exercise_name="Rotação Externa" class="individual_card bg-amber-100 w-72 rounded shadow-md mb-10 ">
+
+            <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
+              <div>
+                <h2 class="">
+                  Alongamento: <br>tensor da fáscia lata 
+                </h2>
+              </div>
+                <div>
+                  <input
+                  id="exercise_22_input"
+                  class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                  type="checkbox"
+                /> 
+                </div>
+
+            </div>
+
+            <div class="flex flex-col bg-white rounded-lg">
+              <img
+                class="h-40 w-72 object-contain rounded-b-lg"
+                src="../images_anca/ex_22.jpg"
+                alt=""
+                data-img="../images/external_rotation.png"
+              />
+              <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
+                <div class="w-2/4 flex pl-6" >
+                  <label for="s_ex_20">Séries</label>
+                  <input id="s_ex_22" value=1 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number"  min="1" max="10"></input>
+                </div>
+                <div class="w-2/4 flex ">
+                  <label for="r_ex_20">Repetições</label>
+                  <input id="r_ex_22" value=3 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Individual card ---- EX 23 -->
+          <div id="individual_card" data-exercise_name="Rotação Externa" class="individual_card bg-amber-100 w-72 rounded shadow-md mb-10 ">
+
+            <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
+              <div>
+                <h2 class="">
+                  Alongamento: gémeos <br>(de pé)
+                </h2>
+              </div>
+                <div>
+                  <input
+                  id="exercise_23_input"
+                  class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                  type="checkbox"
+                  checked="true"
+                /> 
+                </div>
+
+            </div>
+
+            <div class="flex flex-col bg-white rounded-lg">
+              <img
+                class="h-40 w-72 object-contain rounded-b-lg"
+                src="../images_anca/ex_23.jpg"
+                alt=""
+                data-img="../images/external_rotation.png"
+              />
+              <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
+                <div class="w-2/4 flex pl-6" >
+                  <label for="s_ex_20">Séries</label>
+                  <input id="s_ex_23" value=1 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number"  min="1" max="10"></input>
+                </div>
+                <div class="w-2/4 flex ">
+                  <label for="r_ex_20">Repetições</label>
+                  <input id="r_ex_23" value=3 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Individual card ---- EX 24 -->
+          <div id="individual_card" data-exercise_name="Rotação Externa" class="individual_card bg-amber-100 w-72 rounded shadow-md mb-10 ">
+
+            <div  class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold flex justify-between items-center h-16">
+              <div>
+                <h2 class="">
+                  Alongamento: gémeos <br>(sentado)
+                </h2>
+              </div>
+                <div>
+                  <input
+                  id="exercise_24_input"
+                  class="bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-rose-700 checked:bg-rose-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                  type="checkbox"
+                /> 
+                </div>
+
+            </div>
+
+            <div class="flex flex-col bg-white rounded-lg">
+              <img
+                class="h-40 w-72 object-contain rounded-b-lg"
+                src="../images_anca/ex_24.jpg"
+                alt=""
+                data-img="../images/external_rotation.png"
+              />
+              <div class="flex justify-center items-center py-2 text-sm text-cyan-700">
+                <div class="w-2/4 flex pl-6" >
+                  <label for="s_ex_20">Séries</label>
+                  <input id="s_ex_24" value=1 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number"  min="1" max="10"></input>
+                </div>
+                <div class="w-2/4 flex ">
+                  <label for="r_ex_20">Repetições</label>
+                  <input id="r_ex_24" value=3 class="w-14 px-2  ml-2 rounded-md bg-sky-100" type="number" min="1" max="30" ></input>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
 
       </div>
     </div>
@@ -1096,7 +1667,7 @@
         <div id="hidden" class=" h-40 flex justify-center items-center" >
             <div class=" bg-rose-500 hover:bg-rose-600 w-80 mx-12 mt-30 rounded-full  text-center py-3 text-white flex flex-row justify-center items-center">
                 <a class="font-bold " href="#">
-                  <button id="button" > Generate PDF </button>
+                  <button id="button" > Imprimir </button>
                 </a>
 
             </div>
@@ -1118,27 +1689,42 @@
 
 
 
+          <!-----------   PRINT   RECOMENDATIONS BOX -------------->
+
+          <div id="print_recomendations" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-6">
+            <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
+              Notas introdutórias:
+            </h2>
+            <div id="individual_card_body_recomendations" class="flex ">
+              <p id="result_recomendations" class="px-4 pb-4"></p>
+            </div>
+          </div>
+
+
+
+
+
+
+
 
           <!-- Individual card -->
-          <div id="print_page_1" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_1" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
-              Exercício 1
+              Flexão ativa da anca 
             </h2>
-            <div id="individual_card_body" class="flex p-4">
+            <div id="individual_card_body" class="flex px-4 py-2">
               <img
-                class="h-40 w-60 object-cover"
-                src="../images/internal_rotation.jpg"
+                class="h-40 w-2/5 object-contain"
+                src="../images_anca/ex_1.jpg"
                 alt=""
                 data-img="../images/internal_rotation.jpg"
               />
-              <div class="flex justify-center items-center">
-                <div class="p-4 rounded-b-lg">
-                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
-                  adipisicing elit. Officiis dignissimos officia vitae
-                  asperiores ea quis aliquid explicabo id in debitis.">
-                    <b>Instruções:</b> Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Officiis dignissimos officia vitae
-                    asperiores ea quis aliquid explicabo id in debitis.
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description=".">
+                    <b>Instruções:</b> <br>
+                    1) Posicione-se deitado de costas. Levante a perna mantendo o joelho reto. Concentre-se em contrair os músculos na parte superior da perna esticada; <br>
+                    2) Baixe lentamente a perna e relaxe. <br> <br>
                   </p>
                   <p id="result_s_ex_1"></p>
                 </div>
@@ -1147,25 +1733,27 @@
             </div>
           </div>
 
-          <div id="print_page_2" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_2" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
-              Exercício 2
+              Abdução ativa da anca (supino)
             </h2>
-            <div id="individual_card_body" class="flex p-4">
+            <div id="individual_card_body" class="flex px-4 py-2">
               <img
-                class="h-40 w-60 object-cover"
-                src="../images/internal_rotation.jpg"
+                class="h-40 w-2/5 object-contain"
+                src="../images_anca/ex_2.jpg"
                 alt=""
                 data-img="../images/internal_rotation.jpg"
               />
-              <div class="flex justify-center items-center">
-                <div class="p-4 rounded-b-lg">
-                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description="Lorem ipsum, dolor sit amet consectetur
                   adipisicing elit. Officiis dignissimos officia vitae
                   asperiores ea quis aliquid explicabo id in debitis.">
-                  <b>Instruções:</b> Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Officiis dignissimos officia vitae
-                    asperiores ea quis aliquid explicabo id in debitis.
+                    <b>Instruções:</b> <br>
+                    1) Deite-se de costas com as pernas esticadas e os dedos dos pés apontados para o teto; <br>
+                    2) Deslize lentamente a perna para fora, afastando-a; <br>
+                    3) Retorne à posição inicial, deslizando novamente para dentro. <br><br>
+                                                           
                   </p>
                   <p id="result_s_ex_2"></p>
                 </div>
@@ -1174,25 +1762,26 @@
             </div>
           </div>
 
-          <div id="print_page_3" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_3" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
-              Exercício 3
+              Extensão ativa da anca (decúbito ventral)
             </h2>
-            <div id="individual_card_body" class="flex p-4">
+            <div id="individual_card_body" class="flex px-4 py-2">
               <img
-                class="h-40 w-60 object-cover"
-                src="../images/internal_rotation.jpg"
+                class="h-40 w-2/5 object-contain"
+                src="../images_anca/ex_3.jpg"
                 alt=""
                 data-img="../images/internal_rotation.jpg"
               />
-              <div class="flex justify-center items-center">
-                <div class="p-4 rounded-b-lg">
-                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
-                  adipisicing elit. Officiis dignissimos officia vitae
-                  asperiores ea quis aliquid explicabo id in debitis.">
-                  <b>Instruções:</b> Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Officiis dignissimos officia vitae
-                    asperiores ea quis aliquid explicabo id in debitis.
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description="">
+                    <b>Instruções:</b> <br>
+                    1) Posicione-se deitado de barriga para baixo; <br>
+                    2) Levante uma perna alguns centímetros do chão mantendo o joelho esticado; <br>
+                    3) Retorne lentamente à posição inicial. <br> <br>
+                    Repita para o lado contra-lateral. <br>
+                                                            
                   </p>
                   <p id="result_s_ex_3"></p>
                 </div>
@@ -1201,26 +1790,27 @@
             </div>
           </div>
 
-          <div id="print_page_4" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+
+          <div id="print_page_4" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-6">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
-              Exercício 4
+              Abdução ativa da anca (decúbito lateral)
             </h2>
             <div id="individual_card_body" class="flex p-4">
               <img
-                class="h-40 w-60 object-cover"
-                src="../images/internal_rotation.jpg"
+                class="h-40 w-2/5 object-contain"
+                src="../images_anca/ex_4.jpg"
                 alt=""
                 data-img="../images/internal_rotation.jpg"
               />
-              <div class="flex justify-center items-center">
+              <div class="flex justify-center items-center w-3/5">
                 <div class="p-4 rounded-b-lg">
-                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
-                  adipisicing elit. Officiis dignissimos officia vitae
-                  asperiores ea quis aliquid explicabo id in debitis.">
-                    <b>Instruções:</b> Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Officiis dignissimos officia vitae
-                    asperiores ea quis aliquid explicabo id in debitis.
-                  </p>
+                  <p class="pb-4" data-description="">
+                    <b>Instruções:</b> <br>
+                    1) Posicione-se deitado de lado, com o joelho de baixo um pouco flexionado; <br>
+                    2) Levante a perna de cima, mantendo o joelho reto e o calcanhar voltado para cima; <br>
+                    3) Retorne lentamente à posição inicial. <br> 
+                    Repita para o lado contra-lateral. <br>
+                                        </p>
                   <p id="result_s_ex_4"></p>
                 </div>
               </div>
@@ -1228,26 +1818,27 @@
             </div>
           </div>
 
-          <div id="print_page_5" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_5" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-6">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
-              Exercício 5
+              Rotação externa ativa da anca (decúbito lateral)
             </h2>
-            <div id="individual_card_body" class="flex p-4">
+            <div id="individual_card_body" class="flex p-4 justify-center items-center">
               <img
-                class="h-40 w-60 object-cover"
-                src="../images/internal_rotation.jpg"
+                class="h-40 w-2/5 object-contain"
+                src="../images_anca/ex_5.jpg"
                 alt=""
-                data-img="../images/internal_rotation.jpg"
+                data-img="../images_anca/ex_5.jpg"
               />
-              <div class="flex justify-center items-center">
-                <div class="p-4 rounded-b-lg">
-                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
-                  adipisicing elit. Officiis dignissimos officia vitae
-                  asperiores ea quis aliquid explicabo id in debitis.">
-                  <b>Instruções:</b> Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Officiis dignissimos officia vitae
-                    asperiores ea quis aliquid explicabo id in debitis.
-                  </p>
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="pb-4" data-description=".">
+                  <b>Instruções:</b> <br>
+                  1) Posicione-se deitado sobre o lado envolvido, mantendo o corpo alinhado, com os joelhos dobrados aproximadamente 90° e os pés juntos; <br>
+                  2) Levante o joelho de cima em direção ao tecto; <br>
+                  3) Retorne lentamente à posição inicial. <br>
+                  Repita para o lado contra-lateral. <br>
+                                      
+                </p>
                   <p id="result_s_ex_5"></p>
                 </div>
               </div>
@@ -1255,25 +1846,28 @@
             </div>
           </div>
 
-          <div id="print_page_6" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+
+          <div id="print_page_6" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
-              Exercício 6
+              Rotação ativa de tronco (supino)
             </h2>
-            <div id="individual_card_body" class="flex p-4">
+            <div id="individual_card_body" class="flex px-4 py-2 justify-center items-center">
               <img
-                class="h-40 w-60 object-cover"
-                src="../images/internal_rotation.jpg"
+                class="h-40 w-2/5 object-contain"
+                src="../images_anca/ex_6.jpg"
                 alt=""
                 data-img="../images/internal_rotation.jpg"
               />
-              <div class="flex justify-center items-center">
-                <div class="p-4 rounded-b-lg">
-                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description="Lorem ipsum, dolor sit amet consectetur
                   adipisicing elit. Officiis dignissimos officia vitae
                   asperiores ea quis aliquid explicabo id in debitis.">
-                  <b>Instruções:</b> Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Officiis dignissimos officia vitae
-                    asperiores ea quis aliquid explicabo id in debitis.
+                    <b>Instruções:</b> <br>
+                    1) Posicione-se deitado de costas com os braços estendidos em forma de “T”; <br>
+                    2) Mantendo a parte superior das costas e os braços em contato com o chão, rode a anca e pernas para um lado como ilustra a figura; <br> 
+                    3) Rode para o lado oposto. <br><br>
+                                                            
                   </p>
                   <p id="result_s_ex_6"></p>
                 </div>
@@ -1282,25 +1876,29 @@
             </div>
           </div>
 
-          <div id="print_page_7" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+
+          <div id="print_page_7" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
-              Exercício 7
+              "Ankle slides"
             </h2>
-            <div id="individual_card_body" class="flex p-4">
+            <div id="individual_card_body" class="flex px-4 py-2">
               <img
-                class="h-40 w-60 object-cover"
-                src="../images/internal_rotation.jpg"
+                class="h-40 w-2/5 object-contain"
+                src="../images_anca/ex_7.jpg"
                 alt=""
                 data-img="../images/internal_rotation.jpg"
               />
-              <div class="flex justify-center items-center">
-                <div class="p-4 rounded-b-lg">
-                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description="Lorem ipsum, dolor sit amet consectetur
                   adipisicing elit. Officiis dignissimos officia vitae
                   asperiores ea quis aliquid explicabo id in debitis.">
-                    <b>Instruções:</b> Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Officiis dignissimos officia vitae
-                    asperiores ea quis aliquid explicabo id in debitis.
+                    <b>Instruções:</b> <br>
+                    1) Posicione-se deitado de costas; <br>
+                    2) Leve o calcanhar em direção à nádega, deslizando o pé no colchão; <br>
+                    3) Retorne lentamente à posição inicial. <br><br>
+                    
+                                                            
                   </p>
                   <p id="result_s_ex_7"></p>
                 </div>
@@ -1309,26 +1907,29 @@
             </div>
           </div>
 
-          <div id="print_page_8" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
-            <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
-              Exercício 8
-            </h2>
-            <div id="individual_card_body" class="flex p-4">
+
+          <div id="print_page_8" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
+            
+              <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
+                Flexão e extensão ativas do tornozelo 
+              </h2>
+
+            <div id="individual_card_body" class="flex  py-2 justify-center items-center">
               <img
-                class="h-40 w-60 object-cover"
-                src="../images/internal_rotation.jpg"
+                class="h-40 w-2/5 object-contain"
+                src="../images_anca/ex_8.jpg"
                 alt=""
                 data-img="../images/internal_rotation.jpg"
               />
-              <div class="flex justify-center items-center">
-                <div class="p-4 rounded-b-lg">
-                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
-                  adipisicing elit. Officiis dignissimos officia vitae
-                  asperiores ea quis aliquid explicabo id in debitis.">
-                  <b>Instruções:</b> Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Officiis dignissimos officia vitae
-                    asperiores ea quis aliquid explicabo id in debitis.
-                  </p>
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+
+                    <p > 
+                      <b>Instruções:</b> <br>
+
+                    1) Realize movimentos de flexão plantar (levar o antepé para a frente) e de dorsiflexão (levar o antepé para trás), como ilustra a figura. <br> <br> 
+                    </p> 
+
                   <p id="result_s_ex_8"></p>
                 </div>
               </div>
@@ -1336,106 +1937,177 @@
             </div>
           </div>
 
-          <div id="print_page_9" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+
+          <div id="print_page_9" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
-              Exercício 9
+              Contração isométrica do quadricípite
             </h2>
-            <div id="individual_card_body" class="flex p-4">
+            <div id="individual_card_body" class="flex px-4 py-2 justify-center items-center">
               <img
-                class="h-40 w-60 object-cover"
-                src="../images/internal_rotation.jpg"
+                class="h-40 w-2/5 object-contain "
+                src="../images_anca/ex_9.jpg"
                 alt=""
                 data-img="../images/internal_rotation.jpg"
               />
-              <div class="flex justify-center items-center">
-                <div class="p-4 rounded-b-lg">
-                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
-                  adipisicing elit. Officiis dignissimos officia vitae
-                  asperiores ea quis aliquid explicabo id in debitis.">
-                  <b>Instruções:</b> Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Officiis dignissimos officia vitae
-                    asperiores ea quis aliquid explicabo id in debitis.
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description="">
+                    <b>Instruções:</b> <br>
+                    1) Posicione-se deitado de costas; <br>
+                    2) Contraia o músculo anterior da coxa (quadrícipite), enquanto simultaneamente tente "esmagar" o joelho contra o colchão e levantar o pé do chão; <br>
+                    3) Mantenha a contração por 5-10 segundos, e relaxe. <br><br>
                   </p>
                   <p id="result_s_ex_9"></p>
                 </div>
               </div>
 
+
+
+          
             </div>
+
+
+
+
+
           </div>
 
-          <div id="print_page_10" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_10" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
-              Exercício 10
+              Contração isométrica dos glúteos
             </h2>
-            <div id="individual_card_body" class="flex p-4">
+            <div id="individual_card_body" class="flex px-4 py-2">
               <img
-                class="h-40 w-60 object-cover"
-                src="../images/internal_rotation.jpg"
+                class="h-40 w-2/5 object-contain"
+                src="../images_anca/ex_10.jpg"
                 alt=""
                 data-img="../images/internal_rotation.jpg"
               />
-              <div class="flex justify-center items-center">
-                <div class="p-4 rounded-b-lg">
-                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
-                  adipisicing elit. Officiis dignissimos officia vitae
-                  asperiores ea quis aliquid explicabo id in debitis.">
-                    <b>Instruções:</b> Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Officiis dignissimos officia vitae
-                    asperiores ea quis aliquid explicabo id in debitis.
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description=".">
+                    <b>Instruções:</b> <br>
+                    1) Posicione-se deitado de costas; <br>
+                    2) Contraia as nádegas (músculos glúteos); <br>
+                    3) Mantenha a contração por 5-10 segundos, e relaxe. <br><br>
+                    
                   </p>
                   <p id="result_s_ex_10"></p>
                 </div>
               </div>
-
             </div>
+
+
           </div>
 
-          <div id="print_page_11" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+
+          <div id="print_page_11" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
-              Exercício 11
+              Flexão, extensão e abdução ativas da anca (de pé)
             </h2>
-            <div id="individual_card_body" class="flex p-4">
+            <div id="individual_card_body" class="flex px-4 py-2">
               <img
-                class="h-40 w-60 object-cover"
-                src="../images/internal_rotation.jpg"
+                class="h-40 w-2/5 object-contain"
+                src="../images_anca/ex_11_1.jpg"
                 alt=""
                 data-img="../images/internal_rotation.jpg"
               />
-              <div class="flex justify-center items-center">
-                <div class="p-4 rounded-b-lg">
-                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
-                  adipisicing elit. Officiis dignissimos officia vitae
-                  asperiores ea quis aliquid explicabo id in debitis.">
-                  <b>Instruções:</b> Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Officiis dignissimos officia vitae
-                    asperiores ea quis aliquid explicabo id in debitis.
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description=".">
+                    <b>Instruções:</b> <br>
+                    <u>Flexão da anca:</u> <br>
+                    1) Posicione-se de pé, apoiado em frente a uma mesa; <br>
+                    2) Leve um joelho para cima, até ao nível da anca; <br>
+                    3) Retorne à posição inicial. <br>
+                    
                   </p>
                   <p id="result_s_ex_11"></p>
                 </div>
               </div>
 
-            </div>
-          </div>
 
-          <div id="print_page_12" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
-            <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
-              Exercício 12
-            </h2>
-            <div id="individual_card_body" class="flex p-4">
+
+          
+            </div>
+
+            <div id="individual_card_body" class="flex px-4 py-2">
               <img
-                class="h-40 w-60 object-cover"
-                src="../images/internal_rotation.jpg"
+                class="h-40 w-2/5 object-contain"
+                src="../images_anca/ex_11_2.jpg"
                 alt=""
                 data-img="../images/internal_rotation.jpg"
               />
-              <div class="flex justify-center items-center">
-                <div class="p-4 rounded-b-lg">
-                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description="Lorem ipsum, dolor sit amet consectetur
                   adipisicing elit. Officiis dignissimos officia vitae
                   asperiores ea quis aliquid explicabo id in debitis.">
-                  <b>Instruções:</b> Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Officiis dignissimos officia vitae
-                    asperiores ea quis aliquid explicabo id in debitis.
+                  <u>Extensão da anca</u><br>
+                  1) Posicione-se de pé, apoiado em frente a uma mesa; <br>
+                  2) Movimente a perna para trás, como ilustra a figura; <br>
+                  3) Retorne à posição inicial. <br>
+                    
+                  </p>
+                  <p id="result_s_ex_11"></p>
+                </div>
+              </div>
+
+
+
+          
+            </div>
+
+            <div id="individual_card_body" class="flex px-4 py-2">
+              <img
+                class="h-40 w-2/5 object-contain"
+                src="../images_anca/ex_11_3.jpg"
+                alt=""
+                data-img="../images/internal_rotation.jpg"
+              />
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description="Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Officiis dignissimos officia vitae
+                  asperiores ea quis aliquid explicabo id in debitis.">
+                  <u>Abdução da anca</u><br>
+                  1) Posicione-se de pé, apoiado em frente a uma mesa; <br>
+                  2) Movimente a perna para o lado, afastando-a do corpo, como ilustra a figura; <br>
+                  3) Retorne à posição inicial. <br>
+                    
+                  </p>
+                  <p id="result_s_ex_11"></p>
+                </div>
+              </div>
+
+
+
+          
+            </div>
+
+          </div>
+
+          <div id="print_page_12" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
+            <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
+              Mini-agachamento
+            </h2>
+            <div id="individual_card_body" class="flex px-4 py-2">
+              <img
+                class="h-40 w-2/5 object-contain"
+                src="../images_anca/ex_12.jpg"
+                alt=""
+                data-img="../images/internal_rotation.jpg"
+              />
+              <div class="flex justify-center items-center w-3/5">
+                <div class="pl-6 rounded-b-lg">
+                  <p class="" data-description="Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Officiis dignissimos officia vitae
+                  asperiores ea quis aliquid explicabo id in debitis.">
+                    <b>Instruções:</b> <br>
+                    1) Posicione-se de pé, com uma cadeira à sua frente para apoio; <br>
+                    2) Mova a anca para trás enquanto dobra levemente os joelhos, fazendo um meio agachamento; <br>
+                    3) Retorne à posição inicial. <br><br>
+
                   </p>
                   <p id="result_s_ex_12"></p>
                 </div>
@@ -1444,25 +2116,28 @@
             </div>
           </div>
 
-          <div id="print_page_13" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+
+          <div id="print_page_13" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
-              Exercício 13
+              Agachamento na cadeira
             </h2>
-            <div id="individual_card_body" class="flex p-4">
+            <div id="individual_card_body" class="flex px-4 py-2">
               <img
-                class="h-40 w-60 object-cover"
-                src="../images/internal_rotation.jpg"
+                class="h-40 w-2/5 object-contain"
+                src="../images_anca/ex_13.jpg"
                 alt=""
                 data-img="../images/internal_rotation.jpg"
               />
-              <div class="flex justify-center items-center">
-                <div class="p-4 rounded-b-lg">
-                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description="Lorem ipsum, dolor sit amet consectetur
                   adipisicing elit. Officiis dignissimos officia vitae
                   asperiores ea quis aliquid explicabo id in debitis.">
-                    <b>Instruções:</b> Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Officiis dignissimos officia vitae
-                    asperiores ea quis aliquid explicabo id in debitis.
+                    <b>Instruções:</b> <br>
+                    1) Posicione-se de pé, com uma cadeira atrás de si; <br>
+                    2) Mova a anca para trás enquanto dobra os joelhos, como se estivesse a sentar até tocar com as nádegas na cadeira; <br>
+                    3) Levante-se, retornando à posição inicial. <br><br>
+
                   </p>
                   <p id="result_s_ex_13"></p>
                 </div>
@@ -1471,52 +2146,60 @@
             </div>
           </div>
 
-          <div id="print_page_14" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_14" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
-              Exercício 14
+              Ponte (supino)
             </h2>
-            <div id="individual_card_body" class="flex p-4">
+            <div id="individual_card_body" class="flex px-4 py-2">
               <img
-                class="h-40 w-60 object-cover"
-                src="../images/internal_rotation.jpg"
+                class="h-40 w-2/5 object-contain"
+                src="../images_anca/ex_14.jpg"
                 alt=""
                 data-img="../images/internal_rotation.jpg"
               />
-              <div class="flex justify-center items-center">
-                <div class="p-4 rounded-b-lg">
-                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description="Lorem ipsum, dolor sit amet consectetur
                   adipisicing elit. Officiis dignissimos officia vitae
                   asperiores ea quis aliquid explicabo id in debitis.">
-                  <b>Instruções:</b> Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Officiis dignissimos officia vitae
-                    asperiores ea quis aliquid explicabo id in debitis.
+                    <b>Instruções:</b> <br>
+                    1) Posicione-se deitado de costas com os joelhos dobrados, os pés à largura da anca e os seus ao seu lado; <br>
+                    2) Contraia as nádegas, levantando a anca do chão em direção ao tecto (ficando apoiado sobre as omoplatas); <br>
+                    3) Mantenha a posição por por 3-5 segundos; <br>
+                    4) Desça lentamente, retornando à posição inicial. <br> <br>
                   </p>
                   <p id="result_s_ex_14"></p>
                 </div>
               </div>
 
             </div>
+
+
+
+
           </div>
 
-          <div id="print_page_15" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+
+          <div id="print_page_15" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
-              Exercício 15
+              Rotação externa da anca com banda elástica (decúbito lateral)
             </h2>
-            <div id="individual_card_body" class="flex p-4">
+            <div id="individual_card_body" class="flex px-4 py-2">
               <img
-                class="h-40 w-60 object-cover"
-                src="../images/internal_rotation.jpg"
+                class="h-40 w-2/5 object-contain"
+                src="../images_anca/ex_15.jpg"
                 alt=""
                 data-img="../images/internal_rotation.jpg"
               />
-              <div class="flex justify-center items-center">
-                <div class="p-4 rounded-b-lg">
-                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
-                  adipisicing elit. Officiis dignissimos officia vitae
-                  asperiores ea quis aliquid explicabo id in debitis.">
-                  <b>Instruções:</b> Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Officiis dignissimos officia vitae
-                    asperiores ea quis aliquid explicabo id in debitis.
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description="">
+                    <b>Instruções:</b> <br>
+                    1) Posicione-se deitado sobre o lado envolvido com um elástico em redor das coxas junto aos joelhos, com os joelhos dobrados aproximadamente 90° e os pés juntos; <br>
+                    2) Levante o joelho de cima em direção ao tecto, esticando o elástico; <br>
+                    3) Retorne lentamente à posição inicial. <br>
+                    Repita para o lado contra-lateral. <br>
+                    
                   </p>
                   <p id="result_s_ex_15"></p>
                 </div>
@@ -1525,53 +2208,219 @@
             </div>
           </div>
 
-          <div id="print_page_16" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+<!-- 
+          <div id="print_page_16" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
-              Exercício 16
+              Apoio unipodal
             </h2>
-            <div id="individual_card_body" class="flex p-4">
+            <div id="individual_card_body" class="flex px-4 py-2">
               <img
-                class="h-40 w-60 object-cover"
-                src="../images/internal_rotation.jpg"
+                class="h-40 w-2/5 object-contain"
+                src="../images_anca/ex_16.jpg"
                 alt=""
                 data-img="../images/internal_rotation.jpg"
               />
-              <div class="flex justify-center items-center">
-                <div class="p-4 rounded-b-lg">
-                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description="">
+                    <b>Instruções:</b> <br>
+                    1) Posicione-se de pé; <br>
+                    2) Leve um joelho para cima até ao nível da anca, permanecendo apoiado no pé contralateral; <br>
+                    3) Mantenha a posição por 15 segundos, equilibrando-se; <br>
+                    4) Retorne à posição inicial. Repita o exercício para o lado oposto. <br> <br>
+                      </p>
+                  <p id="result_s_ex_16"></p>
+                </div>
+              </div>
+
+            </div>
+          </div> -->
+
+
+
+
+
+
+
+          <div id="print_page_25" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
+            <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
+              Apoio unipodal
+            </h2>
+            <div id="individual_card_body" class="flex px-4 py-2">
+              <img
+                class="h-40 w-2/5 object-contain"
+                src="../images_anca/ex_25.jpg"
+                alt=""
+                data-img="../images/internal_rotation.jpg"
+              />
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description="Lorem ipsum, dolor sit amet consectetur
                   adipisicing elit. Officiis dignissimos officia vitae
                   asperiores ea quis aliquid explicabo id in debitis.">
-                    <b>Instruções:</b> Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Officiis dignissimos officia vitae
-                    asperiores ea quis aliquid explicabo id in debitis.
-                  </p>
-                  <p id="result_s_ex_16"></p>
+                    <b>Instruções:</b> <br>
+                    1) Posicione-se de pé; <br>
+                    2) Leve um joelho para cima até ao nível da anca, permanecendo apoiado no pé contralateral; <br>
+                    3) Mantenha a posição por 15 segundos, equilibrando-se; <br>
+                    4) Retorne à posição inicial. Repita o exercício para o lado oposto. <br> <br>
+                    </p>
+                  <p id="result_s_ex_25"></p>
                 </div>
               </div>
 
             </div>
           </div>
 
-          <div id="print_page_17" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_26" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
-              Exercício 17
+              Apoio unipodal com almofada
             </h2>
-            <div id="individual_card_body" class="flex p-4">
+            <div id="individual_card_body" class="flex px-4 py-2">
               <img
-                class="h-40 w-60 object-cover"
-                src="../images/internal_rotation.jpg"
+                class="h-60 w-2/5 object-contain"
+                src="../images_anca/ex_26.jpg"
                 alt=""
                 data-img="../images/internal_rotation.jpg"
               />
-              <div class="flex justify-center items-center">
-                <div class="p-4 rounded-b-lg">
-                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description="Lorem ipsum, dolor sit amet consectetur
                   adipisicing elit. Officiis dignissimos officia vitae
                   asperiores ea quis aliquid explicabo id in debitis.">
-                  <b>Instruções:</b> Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Officiis dignissimos officia vitae
-                    asperiores ea quis aliquid explicabo id in debitis.
+                    <b>Instruções:</b> <br>
+                    1) Posicione-se de pé, em frente a uma cadeira para apoio se necessário; <br>
+                    2) Leve um joelho para cima até ao nível da anca, permanecendo apoiado no pé contralateral em cima de uma almofada; <br>
+                    3) Mantenha a posição por 15 segundos, equilibrando-se; <br>
+                    4) Retorne à posição inicial. Repita o exercício para o lado oposto. <br> <br>
+                    </p>
+                  <p id="result_s_ex_26"></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="print_page_27" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
+            <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
+              Agachamento unipodal
+            </h2>
+            <div id="individual_card_body" class="flex px-4 py-2">
+              <img
+                class="h-40 w-2/5 object-contain"
+                src="../images_anca/ex_27.jpg"
+                alt=""
+                data-img="../images/internal_rotation.jpg"
+              />
+              <div class="flex justify-center items-center w-3/5">
+                <div class="pl-6 rounded-b-lg">
+                  <p class="" data-description="Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Officiis dignissimos officia vitae
+                  asperiores ea quis aliquid explicabo id in debitis.">
+                    <b>Instruções:</b> <br>
+                    1) Posicione-se de pé sobre apenas uma perna (apoio unipodal); <br>
+                    2) Realize um pequeno agachamento (até cerca de 45º), flexionando o joelho e a anca; <br>
+                    3) Repita o exercício para o lado oposto. <br>
+                    Nota: Certifique-se de que mantém o membro inferior alinhado, e que o joelho não se desloca para dentro. <br> <br>
                   </p>
+                  <p id="result_s_ex_27"></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="print_page_28" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
+            <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
+              Alongamento - rotação interna com toalha
+            </h2>
+            <div id="individual_card_body" class="flex px-4 py-2">
+              <img
+                class="h-40 w-2/5 object-contain"
+                src="../images_anca/ex_28.jpg"
+                alt=""
+                data-img="../images/internal_rotation.jpg"
+              />
+              <div class="flex justify-center items-center w-3/5">
+                <div class="pl-6 rounded-b-lg">
+                  <p class="" data-description=".">
+                    <b>Instruções:</b> <br>
+                    1) Coloque-se de pé, segurando as duas pontas de uma toalha em cada mão, com um braço atrás da cabeça e o outro atrás e a meio das costas, como na figura; <br>
+                    2) Estique lentamente o braço superior, puxando suavemente a toalha para cima até sentir um alongamento; <br>
+                    3) Mantenha o alongamento por 15-60 segundos; <br>
+                    4) Relaxe e repita.             </p>
+                  <p id="result_s_ex_28"></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="print_page_29" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
+            <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
+              Exercício do relógio
+            </h2>
+            <div id="individual_card_body" class="flex px-4 py-2">
+              <img
+                class="h-40 w-2/5 object-contain"
+                src="../images_anca/ex_29.jpg"
+                alt=""
+                data-img="../images/internal_rotation.jpg"
+              />
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description="Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Officiis dignissimos officia vitae
+                  asperiores ea quis aliquid explicabo id in debitis.">
+                    <b>Instruções:</b> <br>
+                    1) Posicione-se de pé, imaginando que está no centro de um relógio e os números associados ao relógio; <br>
+                    2) Apoie-se apenas numa perna, como ilustra a figura; <br>
+                    3) Com o pé livre, tente alcançar o mais longe longe possível em direção às 12h (para a frente), 15h (para o lado), 18h (para trás) e 21h (para o lado), enquanto mantém o equilíbrio; <br>
+                    4) Retorne à posição inicial. <br><br>
+                                   </p>
+                  <p id="result_s_ex_29"></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div id="print_page_17" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
+            <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
+              Alongamento - flexores da anca
+            </h2>
+            <div id="individual_card_body" class="flex px-4 py-2">
+              <img
+                class="h-40 w-2/5 object-contain"
+                src="../images_knee/ex_17.jpg"
+                alt=""
+                data-img="../images/internal_rotation.jpg"
+              />
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description="Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Officiis dignissimos officia vitae
+                  asperiores ea quis aliquid explicabo id in debitis.">
+                    <b>Instruções:</b> <br>
+                    1) Posicione-se ajoelhado com o joelho direito no chão; <br>
+                    2) Traga sua perna esquerda para a sua frente de modo que sua coxa fique paralela ao chão, o joelho fica dobrado num ângulo de 90 
+                    graus e o seu pé fica apoiado no chão; <br>
+                    3) Mantendo as suas costas rectas, desloque seu peso para a frente até sentir um alongamento na parte frontal da coxa direita; <br>
+                    4) Mantenha a posição por 10-30 segundos. <br>
+                    Repita o exercício para o lado oposto. <br><br>
+                                      </p>
                   <p id="result_s_ex_17"></p>
                 </div>
               </div>
@@ -1579,26 +2428,30 @@
             </div>
           </div>
 
-          <div id="print_page_18" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+
+          <div id="print_page_18" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
-              Exercício 18
+              Alongamento - glúteos (sentado)
             </h2>
-            <div id="individual_card_body" class="flex p-4">
+            <div id="individual_card_body" class="flex px-4 py-2">
               <img
-                class="h-40 w-60 object-cover"
-                src="../images/internal_rotation.jpg"
+                class="h-40 w-2/5 object-contain"
+                src="../images_knee/ex_18.jpg"
                 alt=""
                 data-img="../images/internal_rotation.jpg"
               />
-              <div class="flex justify-center items-center">
-                <div class="p-4 rounded-b-lg">
-                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description="Lorem ipsum, dolor sit amet consectetur
                   adipisicing elit. Officiis dignissimos officia vitae
                   asperiores ea quis aliquid explicabo id in debitis.">
-                  <b>Instruções:</b> Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Officiis dignissimos officia vitae
-                    asperiores ea quis aliquid explicabo id in debitis.
-                  </p>
+                    <b>Instruções:</b> <br>
+                    1) Sente-se numa cadeira com ambos os pés apoiados no chão; <br>
+                    2) Levante o tornozelo direito e coloque-o sobre o joelho esquerdo; <br>
+                    3) Em seguida, desloque o seu o tronco para a frente em direção aos joelhos (mantenha a coluna reta), o suficiente para sentir o alongamento na nádega; <br>
+                    4) Mantenha a posição por 10-30 segundos. <br>
+                    Repita o exercício para o lado oposto. <br> <br>
+                 </p>
                   <p id="result_s_ex_18"></p>
                 </div>
               </div>
@@ -1606,25 +2459,26 @@
             </div>
           </div>
 
-          <div id="print_page_19" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+          <div id="print_page_19" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
-              Exercício 19
+              Alongamento - glúteos (supino)
             </h2>
-            <div id="individual_card_body" class="flex p-4">
+            <div id="individual_card_body" class="flex px-4 py-2">
               <img
-                class="h-40 w-60 object-cover"
-                src="../images/internal_rotation.jpg"
+                class="h-40 w-2/5 object-contain"
+                src="../images_knee/ex_19.jpg"
                 alt=""
                 data-img="../images/internal_rotation.jpg"
               />
-              <div class="flex justify-center items-center">
-                <div class="p-4 rounded-b-lg">
-                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
-                  adipisicing elit. Officiis dignissimos officia vitae
-                  asperiores ea quis aliquid explicabo id in debitis.">
-                    <b>Instruções:</b> Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Officiis dignissimos officia vitae
-                    asperiores ea quis aliquid explicabo id in debitis.
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description=".">
+                    <b>Instruções:</b> <br>
+                    1) Posicione-se deitado de costas no chão ou tapete, com os joelhos dobrados e os pés assentes no chão; <br>
+                    2) Cruze uma perna sobre a coxa da outra perna; <br>
+                    3) Segure a parte de trás da coxa da perna inferior com as duas mãos, e puxe a perna em direção ao seu tronco até sentir um alongamento; <br>
+                    2) Mantenha a posição por 10-30 segundos. <br>
+                    Repita o exercício para o lado oposto. <br> <br>
                   </p>
                   <p id="result_s_ex_19"></p>
                 </div>
@@ -1633,25 +2487,32 @@
             </div>
           </div>
 
-          <div id="print_page_20" in data-exercise_name="Rotação Externa" class="bg-amber-100 rounded shadow-md mb-10">
+
+
+
+
+          <div id="print_page_20" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
             <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
-              Exercício 20
+              Alongamento - isquiotibiais (de pé)
             </h2>
-            <div id="individual_card_body" class="flex p-4">
+            <div id="individual_card_body" class="flex px-4 py-2">
               <img
-                class="h-40 w-60 object-cover"
-                src="../images/internal_rotation.jpg"
+                class="h-40 w-2/5 object-contain"
+                src="../images_knee/ex_20.jpg"
                 alt=""
                 data-img="../images/internal_rotation.jpg"
               />
-              <div class="flex justify-center items-center">
-                <div class="p-4 rounded-b-lg">
-                  <p class="pb-4" data-description="Lorem ipsum, dolor sit amet consectetur
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description="Lorem ipsum, dolor sit amet consectetur
                   adipisicing elit. Officiis dignissimos officia vitae
                   asperiores ea quis aliquid explicabo id in debitis.">
-                  <b>Instruções:</b> Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Officiis dignissimos officia vitae
-                    asperiores ea quis aliquid explicabo id in debitis.
+                    <b>Instruções:</b> <br>
+                    1) Coloque um calcanhar numa cadeira/superfície elevada, como ilustra a figura; <br>
+                    2) Mantendo a perna esticada, desloque o seu tronco para a frente, até sentir um alongamento na região posterior da coxa; <br>
+                    3) Mantenha a posição por 10-30 segundos; <br>
+                    Repita o exercício para o lado oposto. <br> <br>
+         
                   </p>
                   <p id="result_s_ex_20"></p>
                 </div>
@@ -1659,6 +2520,124 @@
 
             </div>
           </div>
+
+
+          <div id="print_page_21" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
+            <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
+              Alongamento - isquiotibiais (supino)
+            </h2>
+            <div id="individual_card_body" class="flex px-4 py-2">
+              <img
+                class="h-40 w-2/5 object-contain"
+                src="../images_knee/ex_21.jpg"
+                alt=""
+                data-img="../images/internal_rotation.jpg"
+              />
+              <div class="flex justify-center items-center w-3/5">
+                <div class="pl-6 rounded-b-lg">
+                  <p class="" data-description="Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Officiis dignissimos officia vitae
+                  asperiores ea quis aliquid explicabo id in debitis.">
+                    <b>Instruções:</b> <br>
+                    1) Posicione-se deitado de costas, com uma perna elevada e com uma banda elástica em volta do pé, como ilustra a figura; <br>
+                    2) Puxe a faixa em direção à barriga, até sentir o alongamento na região posterior da coxa; <br>
+                    3) Mantenha a posição por 10-30 segundos. <br>
+                    Repita o exercício para o lado oposto. <br><br>            
+                  </p>
+                  <p id="result_s_ex_21"></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="print_page_22" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
+            <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
+              Alongamento - tensor da fáscia lata
+            </h2>
+            <div id="individual_card_body" class="flex px-4 py-2">
+              <img
+                class="h-60 w-2/5 object-contain"
+                src="../images_knee/ex_22.jpg"
+                alt=""
+                data-img="../images/internal_rotation.jpg"
+              />
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description="Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Officiis dignissimos officia vitae
+                  asperiores ea quis aliquid explicabo id in debitis.">
+                    <b>Instruções:</b> <br>
+                    1) Posicione-se de pé, ao lado uma parede; <br>
+                    2) Apoie-se na parede para se equilibrar e cruze uma perna atrás da outra; <br>
+                    3) Desloque a sua anca em direção à parede (inclinando o restante corpo em direção oposta), até sentir um alongamento na região lateral da anca; <br>
+                    4) Mantenha a posição por 10-30 segundos. <br>
+                    Repita o exercício para o lado oposto. <br>
+                    Nota: Se a perna direita estiver atrás, incline o corpo para a esquerda. Se a perna esquerda estiver atrás, incline-se para a direita. <br> <br>
+                  </p>
+                  <p id="result_s_ex_22"></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="print_page_23" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
+            <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
+              Alongamento - gémeos (de pé)
+            </h2>
+            <div id="individual_card_body" class="flex px-4 py-2">
+              <img
+                class="h-60 w-2/5 object-contain"
+                src="../images_knee/ex_23.jpg"
+                alt=""
+                data-img="../images/internal_rotation.jpg"
+              />
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description=".">
+                    <b>Instruções:</b> <br>
+                    1) Posicione-se de frente para uma parede, apoiando-se nela com ambas as mãos ao nível dos olhos. Coloque a perna a alongar cerca de um passo atrás da outra perna; <br>
+                    2) Mantendo o calcanhar de trás no chão, dobre o joelho da frente até sentir um alongamento na perna de trás; <br>
+                    3) Mantenha o alongamento por 10-30 segundos. <br>
+                    Repita o exercício para o lado oposto. <br> <br>
+                  </p>
+                  <p id="result_s_ex_23"></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="print_page_24" in data-exercise_name="Rotação Externa" class=" rounded shadow-md mb-2">
+            <h2 id="individual_card_head" class="bg-cyan-700 text-white p-2 px-4 rounded-t-lg font-bold">
+              Alongamento - gémeos (sentado)
+            </h2>
+            <div id="individual_card_body" class="flex px-4 py-2">
+              <img
+                class="h-40 w-2/5 object-contain"
+                src="../images_knee/ex_24.jpg"
+                alt=""
+                data-img="../images/internal_rotation.jpg"
+              />
+              <div class="flex justify-left items-center w-3/5">
+                <div class="p-2 rounded-b-lg">
+                  <p class="" data-description="Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Officiis dignissimos officia vitae
+                  asperiores ea quis aliquid explicabo id in debitis.">
+                    <b>Instruções:</b> <br>
+                    1) Sente-se no chão com as pernas esticadas à sua frente. Enrole a banda elástica ao redor do pé a alongar; <br>
+                    2) Segure uma ponta da banda em cada mão e puxe-a em sua direção ao seu tronco, até sentir um alongamento na região posterior da perna; <br>
+                    3) Mantenha o alongamento por 10-30 segundos. <br>
+                    Repita o exercício para o lado oposto.     <br><br>
+                  </p>
+                  <p id="result_s_ex_24"></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
 
 
     </div>
@@ -1704,6 +2683,23 @@
 
 
   button.addEventListener("click", function () {
+
+          // IF - RECOMENDATIONS
+    if (recomendations_box.checked === true) {
+      print_recomendations.style.display = "inline-block";
+      let text_box_input = document.getElementById("text_box_input").value;
+      let result_recomendations = document.getElementById("result_recomendations");
+      result_recomendations.innerHTML = `${text_box_input}`;
+      console.log(text_box_input.value)
+    } else {
+      print_recomendations.style.display = "none"
+    }
+
+
+
+
+
+
 
     if (exercise_1_input.checked === true) {
       print_page_1.style.display = "block";
@@ -1873,16 +2869,16 @@
       print_page_15.style.display = "none"
     }
 
-    if (exercise_16_input.checked === true) {
-      print_page_16.style.display = "block";
-      let s_ex_16 = document.getElementById("s_ex_16").value;
-      let r_ex_16 = document.getElementById("r_ex_16").value;
-      let result_s_ex_16 = document.getElementById("result_s_ex_16");
-      result_s_ex_16.innerHTML = `<b>Séries:</b> ${s_ex_16}   |   <b>Repetições: </b>${r_ex_16}`;
-      console.log(s_ex_16)
-    } else {
-      print_page_16.style.display = "none"
-    }
+    // if (exercise_16_input.checked === true) {
+    //   print_page_16.style.display = "block";
+    //   let s_ex_16 = document.getElementById("s_ex_16").value;
+    //   let r_ex_16 = document.getElementById("r_ex_16").value;
+    //   let result_s_ex_16 = document.getElementById("result_s_ex_16");
+    //   result_s_ex_16.innerHTML = `<b>Séries:</b> ${s_ex_16}   |   <b>Repetições: </b>${r_ex_16}`;
+    //   console.log(s_ex_16)
+    // } else {
+    //   print_page_16.style.display = "none"
+    // }
 
     if (exercise_17_input.checked === true) {
       print_page_17.style.display = "block";
@@ -1929,6 +2925,111 @@
     }
 
 
+    if (exercise_21_input.checked === true) {
+      print_page_21.style.display = "block";
+      let s_ex_21 = document.getElementById("s_ex_21").value;
+      let r_ex_21 = document.getElementById("r_ex_21").value;
+      let result_s_ex_21 = document.getElementById("result_s_ex_21");
+      result_s_ex_21.innerHTML = `<b>Séries:</b> ${s_ex_21}   |   <b>Repetições: </b>${r_ex_21}`;
+      console.log(s_ex_21)
+    } else {
+      print_page_21.style.display = "none"
+    }
+
+
+    if (exercise_22_input.checked === true) {
+      print_page_22.style.display = "block";
+      let s_ex_22 = document.getElementById("s_ex_22").value;
+      let r_ex_22 = document.getElementById("r_ex_22").value;
+      let result_s_ex_22 = document.getElementById("result_s_ex_22");
+      result_s_ex_22.innerHTML = `<b>Séries:</b> ${s_ex_22}   |   <b>Repetições: </b>${r_ex_22}`;
+      console.log(s_ex_22)
+    } else {
+      print_page_22.style.display = "none"
+    }
+
+    if (exercise_23_input.checked === true) {
+      print_page_23.style.display = "block";
+      let s_ex_23 = document.getElementById("s_ex_23").value;
+      let r_ex_23 = document.getElementById("r_ex_23").value;
+      let result_s_ex_23 = document.getElementById("result_s_ex_23");
+      result_s_ex_23.innerHTML = `<b>Séries:</b> ${s_ex_23}   |   <b>Repetições: </b>${r_ex_23}`;
+      console.log(s_ex_23)
+    } else {
+      print_page_23.style.display = "none"
+    }
+
+
+    if (exercise_24_input.checked === true) {
+      print_page_24.style.display = "block";
+      let s_ex_24 = document.getElementById("s_ex_24").value;
+      let r_ex_24 = document.getElementById("r_ex_24").value;
+      let result_s_ex_24 = document.getElementById("result_s_ex_24");
+      result_s_ex_24.innerHTML = `<b>Séries:</b> ${s_ex_24}   |   <b>Repetições: </b>${r_ex_24}`;
+      console.log(s_ex_24)
+    } else {
+      print_page_24.style.display = "none"
+    }
+
+
+    if (exercise_25_input.checked === true) {
+      print_page_25.style.display = "block";
+      let s_ex_25 = document.getElementById("s_ex_25").value;
+      let r_ex_25 = document.getElementById("r_ex_25").value;
+      let result_s_ex_25 = document.getElementById("result_s_ex_25");
+      result_s_ex_25.innerHTML = `<b>Séries:</b> ${s_ex_25}   |   <b>Repetições: </b>${r_ex_25}`;
+      console.log(s_ex_25)
+    } else {
+      print_page_25.style.display = "none"
+    }
+
+
+    if (exercise_26_input.checked === true) {
+      print_page_26.style.display = "block";
+      let s_ex_26 = document.getElementById("s_ex_26").value;
+      let r_ex_26 = document.getElementById("r_ex_26").value;
+      let result_s_ex_26 = document.getElementById("result_s_ex_26");
+      result_s_ex_26.innerHTML = `<b>Séries:</b> ${s_ex_26}   |   <b>Repetições: </b>${r_ex_26}`;
+      console.log(s_ex_26)
+    } else {
+      print_page_26.style.display = "none"
+    }
+
+    if (exercise_27_input.checked === true) {
+      print_page_27.style.display = "block";
+      let s_ex_27 = document.getElementById("s_ex_27").value;
+      let r_ex_27 = document.getElementById("r_ex_27").value;
+      let result_s_ex_27 = document.getElementById("result_s_ex_27");
+      result_s_ex_27.innerHTML = `<b>Séries:</b> ${s_ex_27}   |   <b>Repetições: </b>${r_ex_27}`;
+      console.log(s_ex_27)
+    } else {
+      print_page_27.style.display = "none"
+    }
+
+    // if (exercise_28_input.checked === true) {
+    //   print_page_28.style.display = "block";
+    //   let s_ex_28 = document.getElementById("s_ex_28").value;
+    //   let r_ex_28 = document.getElementById("r_ex_28").value;
+    //   let result_s_ex_28 = document.getElementById("result_s_ex_28");
+    //   result_s_ex_28.innerHTML = `<b>Séries:</b> ${s_ex_28}   |   <b>Repetições: </b>${r_ex_28}`;
+    //   console.log(s_ex_28)
+    // } else {
+    //   print_page_28.style.display = "none"
+    // }
+
+    if (exercise_29_input.checked === true) {
+      print_page_29.style.display = "block";
+      let s_ex_29 = document.getElementById("s_ex_29").value;
+      let r_ex_29 = document.getElementById("r_ex_29").value;
+      let result_s_ex_29 = document.getElementById("result_s_ex_29");
+      result_s_ex_29.innerHTML = `<b>Séries:</b> ${s_ex_29}   |   <b>Repetições: </b>${r_ex_29}`;
+      console.log(s_ex_29)
+    } else {
+      print_page_29.style.display = "none"
+    }
+
+
+
 
 
 
@@ -1947,11 +3048,22 @@
     exercise_13_input.checked === false &&
     exercise_14_input.checked === false &&
     exercise_15_input.checked === false &&
-    exercise_16_input.checked === false &&
+    // exercise_16_input.checked === false &&
     exercise_17_input.checked === false &&
     exercise_18_input.checked === false &&
     exercise_19_input.checked === false &&
-    exercise_20_input.checked === false) {
+    exercise_20_input.checked === false &&
+    exercise_21_input.checked === false &&
+    exercise_22_input.checked === false &&
+    exercise_23_input.checked === false &&
+    exercise_24_input.checked === false &&
+    exercise_25_input.checked === false &&
+    exercise_26_input.checked === false &&
+    exercise_27_input.checked === false &&
+    // exercise_28_input.checked === false &&
+    exercise_29_input.checked === false &&
+
+    recomendations_box.checked === false) {
       window.alert("Selecione pelo menos 1 exercício.")
     } else {
       print()
@@ -1981,11 +3093,21 @@
     print_page_13.style.display = "none"
     print_page_14.style.display = "none"
     print_page_15.style.display = "none"
-    print_page_16.style.display = "none"
+    // print_page_16.style.display = "none"
     print_page_17.style.display = "none"
     print_page_18.style.display = "none"
     print_page_19.style.display = "none"
     print_page_20.style.display = "none"
+    print_page_21.style.display = "none"
+    print_page_22.style.display = "none"
+    print_page_23.style.display = "none"
+    print_page_24.style.display = "none"
+    print_page_25.style.display = "none"
+    print_page_26.style.display = "none"
+    print_page_27.style.display = "none"
+    // print_page_28.style.display = "none"
+    print_page_29.style.display = "none"
+    print_recomendations.style.display = "none"
 
 
 
