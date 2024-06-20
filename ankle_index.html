@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src=
-"https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js">
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercícios - Tornozelo e Pé </title>
+    <title>MFR - Exercícios</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
       rel="stylesheet"
@@ -32,129 +31,9 @@
       };
     </script>
     <script src="script.js"></script>
-
-
-    <style>
-      #print-title {
-        display: none;
-      }
-      #print_page_1 {
-        display: none;
-        width: 100vw;
-        box-shadow: none;
-  
-      }
-      #print_page_2 {
-        display: none;
-        width: 100vw;
-        box-shadow: none;
-
-        
-      }
-      #print-subtitle {
-        display: none;
-      }
-
-
-
-          @media print {
-            #navbar * {
-              display: none;
-            }
-            #sidenav {
-              display: none;
-            }
-
-            #print-title {
-              display: inline-block;
-              width: 100vw;
-              font-size: 25px;
-              font-weight: bold;
-              background-color: #2e8d7f !important;
-              color: rgb(255, 255, 255);
-              text-align: left;
-              border-radius: 5px;
-              margin-bottom: 10px;
-              text-align: center;
-              padding: 10px;
-              margin-bottom: 20px;
-              -webkit-print-color-adjust: exact !important;   /* Chrome, Safari 6 – 15.3, Edge */
-              print-color-adjust: exact !important; 
-
-
-
-            }
-            #print-subtitle {
-              display: inline-block;
-              width: 100vw;
-              text-align: center;
-              margin-top: 30px;
-              margin-bottom: 30px;
-              font-size: 12px;
-
-            }
-
-            @page {
-              width: 100vw;
-            }
-            #subtitle {
-              font-size: 16px;
-              display: none;
-            }
-            
-            body {
-              width: 100vw;
-            }
-
-            .individual_card {
-              box-shadow: none;
-              display: none;
-              width: 100vw;
-              margin: 0;
-
-            }
-
-            #individual_card_head {
-              background-color: #c5f2ff;
-              color: black;
-              font-size: 14px;
-              font-weight: bold;
-              width: 100vw;
-            }
-            #individual_card_body {
-              background-color: #ffffff;
-              color: black;
-              box-shadow: none;
-
-              font-size: 12px;
-              width: 100vw;
-
-            }
-            input {
-              display: none;
-            }
-            .print-hidden {
-              display: none;
-            }
-            #hidden {
-              display: none;
-            }
-
-
-
-
-
-
-    }
-    </style>
-
-
-
-
   </head>
   <body>
-    <div id="navbar">
-      <nav
+    <nav
       class="relative flex w-full items-center justify-between bg-zinc-800 py-6 shadow-sm shadow-neutral-700/10 dark:bg-neutral-800 dark:shadow-black/30 lg:flex-wrap lg:justify-start"
       data-te-navbar-ref
     >
@@ -179,63 +58,61 @@
       </div>
       <!-- Container wrapper -->
     </nav>
-    </div>
 
-
-
+ 
     <div class="flex">
-        <!-- Sidenav -->
-        <div class="min-h-screen w-2/12 bg-sky-200  text-zinc-900 " id="sidenav">
+      <!-- Sidenav --> 
+      <div class="min-h-screen w-2/12 bg-sky-200  text-zinc-900 " id="sidenav">
 
-          <!-- Subtitle of sidebar -->
-          <h5
-            class="font-bold py-5   text-center mx-0 text-xl  bg-cyan-800 text-white"
-          >
-            <p href="#">Patologia Musculoesquelética</p>
-          </h5>
-         
-
-
+        <!-- Subtitle of sidebar -->
+        <h5
+          class="font-bold py-5   text-center mx-0 text-xl  bg-cyan-800 text-white"
+        >
+          <p href="#">Patologia Musculoesquelética</p>
+        </h5>
+       
 
 
-          <!-- Second Sub-container of sidebar -->
-          <div class="border-t border-white">
-            <ul>
-              <li class="py-3 px-5  hover:bg-cyan-600 hover:text-white   ">
-                <a href="./ombro_index.html">Ombro</a>
-              </li>
-              <li class="py-3 px-5 hover:bg-cyan-600 hover:text-white  ">
-                <a href="./cotovelo_index.html">Cotovelo</a>
-              </li>
-              <li class="py-3 px-5 hover:bg-cyan-600 hover:text-white ">
-                <a href="./punho_index.html">Punho e mão</a>
-              </li>
-              <li class="py-3 px-5 hover:bg-cyan-600 hover:text-white ">
-                <a href="./anca_index.html">Anca</a>
-              </li>
-              <li class="py-3 px-5 hover:bg-cyan-600 hover:text-white ">
-                <a href="./knee_index.html">Joelho</a>
-              </li>
-              <li class="py-3 px-5 hover:bg-cyan-600 hover:text-white ">
-                <a href="./ankle_index.html">Tornozelo e pé</a>
-              </li>
-              <li class="py-3 px-5 hover:bg-cyan-600 hover:text-white ">
-                <a href="#">Coluna Cervical</a>
-              </li>
-              <li class="py-3 px-5 hover:bg-cyan-600 hover:text-white ">
-                <a href="#">Coluna Dorsal</a>
-              </li>
-              <li class="py-3 px-5 hover:bg-cyan-600 hover:text-white ">
-                <a href="#">Coluna Lombar</a>
-              </li>
-            </ul>
 
-          </div>
-  
-  
-  
-  
+
+        <!-- Second Sub-container of sidebar -->
+        <div class="border-t border-white">
+          <ul>
+            <li class="py-3 px-5  hover:bg-cyan-600 hover:text-white   ">
+              <a href="./ombro_index.html">Ombro</a>
+            </li>
+            <li class="py-3 px-5 hover:bg-cyan-600 hover:text-white  ">
+              <a href="./cotovelo_index.html">Cotovelo</a>
+            </li>
+            <li class="py-3 px-5 hover:bg-cyan-600 hover:text-white ">
+              <a href="./punho_index.html">Punho e mão</a>
+            </li>
+            <li class="py-3 px-5 hover:bg-cyan-600 hover:text-white ">
+              <a href="./anca_index.html">Anca</a>
+            </li>
+            <li class="py-3 px-5 hover:bg-cyan-600 hover:text-white ">
+              <a href="./knee_index.html">Joelho</a>
+            </li>
+            <li class="py-3 px-5 hover:bg-cyan-600 hover:text-white ">
+              <a href="./ankle_index.html">Tornozelo e pé</a>
+            </li>
+            <li class="py-3 px-5 hover:bg-cyan-600 hover:text-white ">
+              <a href="#">Coluna Cervical</a>
+            </li>
+            <li class="py-3 px-5 hover:bg-cyan-600 hover:text-white ">
+              <a href="#">Coluna Dorsal</a>
+            </li>
+            <li class="py-3 px-5 hover:bg-cyan-600 hover:text-white ">
+              <a href="#">Coluna Lombar</a>
+            </li>
+          </ul>
+
         </div>
+
+
+
+
+      </div>
 
       <!-- Right container -->
       <div class="w-10/12 bg-neutral-100">
@@ -282,45 +159,36 @@
 
 
 
-        <div class="px-20 ">
+        <div class="px-20 pt-10">
 
             <!-- SUBTITLE SECTION -->
             <div class=" mb-60 mt-10  text-zinc-800 text-2xl  items-center">
                 <!-- <img width="60" height="60" src="./images/icons8-curls-with-dumbbells-80(1).png" alt="curls-with-dumbbells"/>  -->
-                <div class="pl-4 py-2 mb-4 text-zinc-800 bg-slate-200 hover:bg-amber-200 w-full">
-                  <a href="./ankle/ankle_all.html"><b>Todos os exercícios de Tornozelo e Pé</b></a>
+                <div class="pl-4 py-6 mb-4 mt-8 text-zinc-800 bg-slate-200 hover:bg-amber-200 w-full">
+                  <a href="./ankle/ankle_all.html"><b>Criar novo programa</b></a>
                 </div>
 
-                <!-- <div class="pl-4  mb-4 text-zinc-800 bg-slate-200 w-full flex border-4 border-slate-200 hover:border-4 hover:border-amber-200">
-                  <div class="w-2/4 py-2 flex justify-start items-center font-bold">
-                    Artrose da anca
-                  </div>
-                  <div class="flex flex-col w-2/4 text-left ">
-                    <div class="hover:bg-amber-200 pl-4 py-2">
-                      <a href="./anca/anca_artrose.html" >- Nível básico</a>
-
-                    </div>
-                    <div class="hover:bg-amber-200 py-2 pl-4">
-                      <a href="" >- Nível intermédio</a>
-
-                    </div>
-                    <div class="hover:bg-amber-200 py-2 pl-4">
-                      <a href="" >- Nível avançado</a>
-
-                    </div>
-
-                  </div>
-                </div> -->
-
-                <div class="pl-4 py-2 mb-4 text-zinc-800 bg-slate-200 hover:bg-amber-200 w-full">
-                  <a href="./ankle/ankle_entorse.html"><b>Entorse do Tornozelo</b></a>
+                <div class="pl-4 mt-20 pb-2 mb-8 text-cyan-800 underline text-3xl  w-full">
+                  <h2><b>Sugestões de programas de exercício:</b></h2>
                 </div>
-                <div class="pl-4 py-2 mb-4 text-zinc-800 bg-slate-200 hover:bg-amber-200 w-full">
-                  <a href="./ankle/ankle_fasciopatia.html"><b>Fasciopatia Plantar</b></a>
+
+
+
+
+
+                <div class="pl-4 py-2 mb-8 text-zinc-800 bg-slate-200 hover:bg-amber-200 w-full">
+                  <a href="./ankle/ankle_entorse.html"><b>Entorse do tornozelo</b></a>
                 </div>
-                <div class="pl-4 py-2 mb-4 text-zinc-800 bg-slate-200 hover:bg-amber-200 w-full">
-                  <a href="./ankle/ankle_fasciopatia.html"><b>Tendinopatia de Aquiles</b></a>
+
+                <div class="pl-4 py-2 mb-8 text-zinc-800 bg-slate-200 hover:bg-amber-200 w-full">
+                  <a href="./ankle/ankle_fasciopatia.html"><b>Fasciopatia plantar</b></a>
                 </div>
+
+                <div class="pl-4 py-2 mb-8 text-zinc-800 bg-slate-200 hover:bg-amber-200 w-full">
+                  <a href="./ankle/ankle_aquiles.html"><b>Tendinopatia de Aquiles</b></a>
+                </div>
+ 
+
             </div>
 
 
@@ -343,62 +211,14 @@
 
     </div>
 
+    </div>
 
-
-
-
-
-
-<!-- <div id = "makepdf" class="m-10">
-<h1>Olá</h1>
-</div> -->
-
-
-
-<!-- 
-<script>
-  let button = document.getElementById("button");
-  let makepdf = document.getElementById("makepdf");
-
-  button.addEventListener("click", function () {
-    html2pdf().from(makepdf).save();
-  });
-</script> -->
-
-<script>
-  let button = document.getElementById("button");
-  let makepdf = document.getElementById("makepdf");
-
-  let print_page = document.getElementById("print_page");
-
-  let exercise_1 = document.getElementById("exercise_1");
-
-console.log(exercise_1)
-
-  button.addEventListener("click", function () {
-
-    if (exercise_1_input.checked === true) {
-      print_page_1.style.display = "block"
-    } else {
-      print_page_1.style.display = "none"
-    }
-
-    if (exercise_2_input.checked === true) {
-      print_page_2.style.display = "block"
-    } else {
-      print_page_2.style.display = "none"
-    }
-
-    print()
-      
-    print_page_1.style.display = "none"
-    print_page_2.style.display = "none"
-
-
-  });
-</script>
-
+    <div class="bg-zinc-900 h-24 flex justify-center items-center text-neutral-400 text-center text-xs">
+      <p>Todos os direitos reservados.</p>
+    </div>
 
     <script src="ombro.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+
   </body>
 </html>
